@@ -63,7 +63,7 @@ public class Project_Run_Tests extends Base_Project
 	{
 		
 	}
-	
+	/*
 	@Test
 	public void test_1_Storelocator() throws Exception
 	{
@@ -72,7 +72,7 @@ public class Project_Run_Tests extends Base_Project
 		logger.info("Store locator - First test");
 		Osf.ClickOnOneOfTheStores() ;
 	}
-
+ 
 	@Test
 	
 	public void test_2_SignIn() throws Exception 
@@ -82,7 +82,7 @@ public class Project_Run_Tests extends Base_Project
 		Hef.ClickOnSignIn();
 		fsf.LoginToPage();
 	}
-	
+	*/
 	@Test
 	public void test_3_SendContactUsForm() throws Exception 
 	{
@@ -92,7 +92,7 @@ public class Project_Run_Tests extends Base_Project
 		Cuf.SendAmessage();
 		Hef.ClickOnLogoSite();
 	}
-	
+	/*
 	@Test
 	public void test_4_SearchForItem() throws Exception 
 	{
@@ -100,7 +100,7 @@ public class Project_Run_Tests extends Base_Project
 		logger.info("Search and Shopping cart- Fourth test");
 		Saf.SearchForAnItemAndAddToShoppingCart();
 	}
-	
+	*/
 	@After
 	public void doAfterTest()
 	{

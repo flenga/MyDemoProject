@@ -108,12 +108,12 @@ public class SearchArea_Factory extends Base_Project
 		try {
 			cf.verifyElementExist(TitleShoppingDiv1);
 			cf.asserequal( TitleShoppingDiv1.getText(), "There is 1 item in your cart.");
-			//cf.asserequal(TotalProducts1.getText(), "$24.01");
-			cf.asserequal(TotalProducts1.getText(), "$24.00");
+			cf.asserequal(TotalProducts1.getText(), "$24.01");
+			//cf.asserequal(TotalProducts1.getText(), "$24.00");
 			cf.asserequal(Totalshipping.getText(), "$7.00");
 			cf.asserequal(TotalIncluds.getText(), "$31.00");
-			//cf.asserequal(ProductTitle.getText(), "1Blouse");
-			cf.asserequal(ProductTitle.getText(), "Blouse");
+			cf.asserequal(ProductTitle.getText(), "1Blouse");
+			//cf.asserequal(ProductTitle.getText(), "Blouse");
 			logger.info("The Elements are displayed on page!!");
 			test.log(LogStatus.PASS, "The Elements:  are displayed on page!!");
 		    //papos2511

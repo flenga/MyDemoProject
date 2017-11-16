@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Environment>
+    <BrowserType>chrome</BrowserType>
+   <!--  ChromeDriverPath>E:/Users/lenga/fabi/Fabi/WebDriver/Drivers/Chrome/chromedriver.exe</ChromeDriverPath>
+    <FFDriverPath>E:/Users/lenga/fabi/Fabi/WebDriver/Drivers/geckodriver.exe</FFDriverPath>
+    <IEDriverPath>E:/Users/lenga/fabi/Fabi/WebDriver/Drivers/IEDriverServer.exe</IEDriverPath>-->
+    <FFDriverPath>Drivers/geckodriver.exe</FFDriverPath>
+    <IEDriverPath>Drivers/IEDriverServer.exe</IEDriverPath>
+    <ChromeDriverPath>Drivers/Chrome/chromedriver.exe</ChromeDriverPath>
+    <driverChrome>webdriver.chrome.driver</driverChrome>
+    <driverFF>webdriver.gecko.driver</driverFF>
+    <driverIE>webdriver.ie.driver</driverIE>
+    <URL>http://yoniflenner.net/prestashop/index.php</URL>
+    
+ <!-- Images to compare-path -->
+ <!--<ImagePath>E:/Users/lenga/fabi/Fabi/WebDriver/screenshot_BMI/sikuli_Images/Project_Sikuli/</ImagePath>   -->
+ <ImagePath>/Sikuli_Images/</ImagePath> 
+ <!-- report-->
+ <!-- <ReportFilePath>E:/Users/lenga/fabi/Fabi/WebDriver/reports/Project_Reports/</ReportFilePath>-->
+ <ReportFilePath>Project_Reports/</ReportFilePath>
+<Reporfilename>_prestashop-E-Commerce-Run.html</Reporfilename>
+</Environment>

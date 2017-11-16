@@ -57,7 +57,8 @@ public class Project_CommonFunction extends Base_Project
 	{
 		try 
 		{
-			File src =new File("E:\\Users\\lenga\\fabi\\Fabi\\WebDriver\\Excels\\testData1.xls");
+			//File src =new File("E:\\Users\\lenga\\fabi\\Fabi\\WebDriver\\Excels\\testData1.xls");
+			File src =new File("Excels\\testData1.xls");
 			wrkbook =Workbook.getWorkbook(src);
 			logger.info("succeed to read from Excel ");
 			test.log(LogStatus.PASS, "Action succeed.");

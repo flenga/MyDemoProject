@@ -50,7 +50,9 @@ public class Base_Project
 	//Reading and Connection to XML file
 	public static String getData (String nodeName) throws ParserConfigurationException, SAXException, IOException
 	{
-		File fXmlFile = new File("E:/Users/lenga/fabi/Fabi/WebDriver/XML/Project_Conf.xml");
+		//File fXmlFile = new File("E:/Users/lenga/fabi/Fabi/WebDriver/XML/Project_Conf.xml");
+		//File fXmlFile = new File("E:/MyProjects/Selenium_project/Project_git/Final_Project/External_Files/XML/Project_Conf.xml");
+		File fXmlFile = new File("XML/Project_Conf.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 		Document doc = dBuilder.parse(fXmlFile); 
