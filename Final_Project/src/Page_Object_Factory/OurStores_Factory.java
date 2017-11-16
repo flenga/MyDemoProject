@@ -34,9 +34,9 @@ public class OurStores_Factory extends Base_Project
 		cf.verifyImageExists("StoreToPNG.png");
 		cf.clickOnImage("StoreToPNG.png");
 		cf.verifyImageExists("StoreDirectionsMiami.png");
-		//cf.verifyImageExists("ClosePopup.png");
-		cf.verifyImageExists("ClosePopup1.png");
-		//cf.clickOnImage("ClosePopup.png");
-		cf.clickOnImage("ClosePopup1.png");
+		cf.verifyImageExists("ClosePopup.png");
+		//cf.verifyImageExists("ClosePopup1.png");
+		cf.clickOnImage("ClosePopup.png");
+		//cf.clickOnImage("ClosePopup1.png");
 	}
 }
