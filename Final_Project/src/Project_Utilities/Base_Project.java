@@ -50,50 +50,13 @@ public class Base_Project
 	//Reading and Connection to XML file
 	public static String getData (String nodeName) throws ParserConfigurationException, SAXException, IOException
 	{
-		//File fXmlFile = new File("E:/Users/lenga/fabi/Fabi/WebDriver/XML/Project_Conf.xml");
-		//File fXmlFile = new File("E:/MyProjects/Selenium_project/Project_git/Final_Project/External_Files/XML/Project_Conf.xml");
-		File fXmlFile = new File("XML/Project_Conf.xml");
+		File fXmlFile = new File("External_Files/XML/Project_Conf.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 		Document doc = dBuilder.parse(fXmlFile); 
 		doc.getDocumentElement().normalize();
 		return doc.getElementsByTagName(nodeName).item(0).getTextContent();
 	}
-//  //*[@id="center_column"]/div
-	/*
-	//Connect to SQL server 
-	public static ResultSet rs;
-	public void connectionToDB() //throws ClassNotFoundException, SQLException  
-	{
-		//String connectionUrl="jdbc:sqlserver://localhost:1433/Fabian";
-		String server="localhost//LENGA-PC/FABI1";
-		int port=1433;
-		String database="Fabian";
-		String connectionUrl="jdbc:sqlserver://"+server+":"+port+";databaseName="+database;
-		//String connectionUrl="jdbc:sqlserver://169.254.111.226/databaseName=Fabian";
-		Connection con=null;
-		Statement stmt =null;
-		rs =null;
-		try
-		{
-			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			con=DriverManager.getConnection(connectionUrl);
-			String SQL ="select * FROM Users where Email LIKE'fabi@wellnesslayers.com '";
-			stmt = con.createStatement();
-			rs= stmt.executeQuery(SQL);
-			//while(rs.next())
-			//{	
-			//System.out.println(rs.getString("Email"));
-			
-			qaws= rs.getString("Email");
-			//}
-		}
-		catch(Exception e)
-		{
-			e.getMessage();
-		}
-	}
-	*/
 	
 	//************************Reports function*********************************
 	public static void  InstanceReports() throws ParserConfigurationException, SAXException, IOException
@@ -118,14 +81,14 @@ public class Base_Project
 	//Screenshot function
 	public static String getscreenshot() throws Exception 
 	{
-		String SsPath=getData("ReportFilePath")+ timeStamp +"-"+localDate+".jpg";	
+		String SsPath=getData("ReportFilePath")+ timeStamp +"-"+localDate+".png";	
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(scrFile, new File(SsPath));
 		return SsPath;
 	}
 
 	//Switch Browser
-	public static void BrowserSwitch(String BrowserType) throws ParserConfigurationException, SAXException, IOException
+	public static void InitBrowser(String BrowserType) throws ParserConfigurationException, SAXException, IOException
 	{
 		switch(BrowserType.toLowerCase())
 		{
@@ -162,13 +125,6 @@ public class Base_Project
 		System.setProperty("webdriver.ie.driver",getData("IEDriverPath"));
 			WebDriver driverIE= new InternetExplorerDriver();
 		return driverIE;
-
 	}
 
-	//	public void test_Scroll_Page_Down() throws Exception 
-	//	{
-	//		JavascriptExecutor jse = (JavascriptExecutor)driver;
-	//		jse.executeScript("window.scrollTo(0, document.body.scrollHeight);"); 
-	//		
-	//	}
 }

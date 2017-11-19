@@ -1,38 +1,29 @@
 package Page_Object_Factory;
 
-import java.util.ArrayList;
-import jxl.Sheet;
-import jxl.Workbook;
-import jxl.read.biff.BiffException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-
 import com.relevantcodes.extentreports.LogStatus;
-
-import org.apache.poi.ss.usermodel.DataFormatter;
-//import DDT.ReadFromExcel;
-//import DDT.ReadFromExcel;
 import Project_Utilities.Base_Project;
 import Project_Utilities.Project_CommonFunction;
-import Page_Object_Factory.Header_Factory;
+
 public class Sign_In_Factory  extends Base_Project
 {
 	
 	Project_CommonFunction cf = new Project_CommonFunction();
 	public String ValuToreport;
-	
-	//Header_Factory cc =new Header_Factory();
 	public WebDriver driver;
+	
 	@FindBy(how = How.LINK_TEXT, using= "Sign in")
 	public WebElement SignIn;
+	
 	@FindBy(how = How.LINK_TEXT, using= "Sign out")//After signin
 	public WebElement SignOut;
+	
 	@FindBy(how = How.XPATH, using= "//*[@id='email']")
-	//@FindBy(how = How.XPATH, using= "//a[contains(text(),'Developer s')]")
 	public WebElement Emailaddress;
-	//	
+		
 	@FindBy(how = How.XPATH, using= "//*[@id='passwd']")  
 	public WebElement Password;
 
@@ -45,11 +36,10 @@ public class Sign_In_Factory  extends Base_Project
 	@FindBy(how = How.XPATH, using= "//*[@id='center_column']/div[1]/p")
 	public WebElement ErrorForSignInTitle;
 
-	@FindBy(how = How.XPATH, using= "//*[@id='center_column']/div[1]/ol/li")  //*[@id="center_column"]/div[1]/ol/li
+	@FindBy(how = How.XPATH, using= "//*[@id='center_column']/div[1]/ol/li") 
 	public WebElement ErrorForSignInSpecific;
 
 	@FindBy(how = How.XPATH, using= "//*[@id='center_column']/p") 
-	//@FindBy(how = How.XPATH, using= "//*[@id='center_column']/p/text()") 
 	public WebElement SuccessLogin;
 
 

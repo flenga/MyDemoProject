@@ -17,16 +17,14 @@ public class OurStores_Factory extends Base_Project
 	
 	@FindBy(how = How.XPATH,using="//*[@id='map']/div/div")
 	public WebElement MapDiv;
-	// Need to set functions to click on The links in the header according to test case
 	public OurStores_Factory (WebDriver driver) 
 	{
 		Base_Project.driver = driver;
 	}
 	
-	public void ClickOnOneOfTheStores() throws Exception 
+	public void OpenOneOfTheStoresLocationCheckingAddressAndDialog() throws Exception //ClickOnOneOfTheStores
 	{
 		ValueSendToreport=StoreLink.getText();
-		
 		cf.test_Scroll_Page_Down();
 		cf.ClickOnElement(StoreLink,ValueSendToreport);
 		cf.waitToElement(MapDiv);

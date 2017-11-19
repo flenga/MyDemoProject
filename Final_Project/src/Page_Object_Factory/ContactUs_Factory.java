@@ -46,14 +46,12 @@ public class ContactUs_Factory  extends Base_Project
 
 	@FindBy(how = How.CSS, using= "span.filename")
 	public WebElement Filename;
-	//This comment been created via GitHub 
-	//new commit 14/11/2017
-	//ANother commit local push to github
+
 	public ContactUs_Factory(WebDriver driver)
 	{
 		this.driver = driver;
 	}
-	// Need to set functions to click on The links in the header according to test case  submitMessage
+	
 	public void SendAmessage() throws Exception 
 	{
 		cf.ReadExcelFile();

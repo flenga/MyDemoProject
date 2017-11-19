@@ -21,30 +21,13 @@ import jxl.Sheet;
 import jxl.Workbook;
 import com.relevantcodes.extentreports.LogStatus;
 import jdk.internal.org.xml.sax.SAXException;
-//Important Need to add log4j jar
-//import java.io.FileInputStream;
-//import java.util.ArrayList;
-//import java.util.Iterator;
-//import java.util.List;
-//import java.awt.AWTException;
-//import org.apache.poi.ss.usermodel.Row;
-//import org.openqa.selenium.By;
-//import org.sikuli.script.FindFailed;
-//import jxl.read.biff.BiffException;
-//import static org.junit.Assert.fail;
-//import org.openqa.selenium.NoSuchElementException;
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.chrome.ChromeDriver;
-//import org.sikuli.script.*;
 
 public class Project_CommonFunction extends Base_Project
 {
-
 	static Logger logger=Logger.getLogger(Project_CommonFunction.class);
 	public String Month;
 	public String DAY;
 	public String Year;
-	//public String ExcelSheetTab;
 	HSSFWorkbook wb;
 	HSSFSheet sheet;
 	static Robot robot;
@@ -52,13 +35,12 @@ public class Project_CommonFunction extends Base_Project
 	public  Workbook wrkbook = null;
 	public static Hashtable<String, Integer> dict = new Hashtable<String, Integer>();
 
-	//
+	//Read from Excel file currently is used in two test ()
 	public void ReadExcelFile() throws IOException
 	{
 		try 
 		{
-			//File src =new File("E:\\Users\\lenga\\fabi\\Fabi\\WebDriver\\Excels\\testData1.xls");
-			File src =new File("Excels\\testData1.xls");
+			File src =new File("External_Files\\Excels\\testData1.xls");
 			wrkbook =Workbook.getWorkbook(src);
 			logger.info("succeed to read from Excel ");
 			test.log(LogStatus.PASS, "Action succeed.");
@@ -77,7 +59,6 @@ public class Project_CommonFunction extends Base_Project
 	public void setClipboardData(String string) throws Exception 
 	{
 		robot=new Robot();
-		//robot.setAutoDelay(1000);
 		try {
 			StringSelection stringSelection= new StringSelection(string);
 			Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
@@ -95,13 +76,9 @@ public class Project_CommonFunction extends Base_Project
 		{
 			logger.error("Something went wrong with this action!!!");
 			test.log(LogStatus.FAIL, "Action Failed  , see Screen Shot: " + e.getMessage() +" "+test.addScreenCapture(getscreenshot()));
-
-
 			e.printStackTrace();
 		}
-
 	}
-
 
 	// Drop down 
 	public void SelectDropdown(WebElement selection,String ValueForSelection) throws Exception
@@ -130,7 +107,7 @@ public class Project_CommonFunction extends Base_Project
 		Month=temDate[1];
 		Year=temDate[2];
 	}
-
+/*
 	//Click on one of the link in the header
 	public static void ClickOnLinkInHeader(WebElement Headerlink) throws Exception
 	{
@@ -163,7 +140,7 @@ public class Project_CommonFunction extends Base_Project
 			test.log(LogStatus.FAIL,"Failed to Click on link !! see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
 		}
 	}
-
+*/
 	//Scroll down
 	public void test_Scroll_Page_Down() throws Exception 
 	{
@@ -188,8 +165,6 @@ public class Project_CommonFunction extends Base_Project
 			test.log(LogStatus.FAIL,"Failed to click on the element: \""+stringToAddtoReport+"\" !! see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
 
 		}
-
-
 	}
 
 	// Send key function from input field
@@ -259,16 +234,6 @@ public class Project_CommonFunction extends Base_Project
 		}
 	}
 
-	//Not relevant
-	/*
-	public void printAllFooterLinks(List<WebElement> FooterLink)
-	{
-		for (WebElement link : FooterLink) 
-		{
-			System.out.println(link.getText());
-		}
-	}
-	 */
 
 	// Function that verify results using DDT Currently using in 2 test (logIn test and Contact us test) 
 	public void NoErrorMessageExsit(WebElement Message, String expectedColor1,String string) throws Exception
@@ -310,7 +275,7 @@ public class Project_CommonFunction extends Base_Project
 
 
 	//Check if element contain text
-	public void ElementExistInPage( WebElement elementExistInPage ,String StrToFind) throws Exception 
+	public void verifyTextInElement( WebElement elementExistInPage ,String StrToFind) throws Exception 
 	{
 		String ElementExistInPage=elementExistInPage.getText();	
 		try
@@ -324,8 +289,6 @@ public class Project_CommonFunction extends Base_Project
 			logger.error("The element: "+ElementExistInPage+" doesn't exsit on page : "+e.getMessage());
 			test.log(LogStatus.FAIL,"The element: "+ElementExistInPage+" doesn't exsit on page !! see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
 		}
-
-
 	}
 
 	//Clicking on image using Sikuli
@@ -398,30 +361,6 @@ public class Project_CommonFunction extends Base_Project
 			test.log(LogStatus.FAIL, "There was an error while sending the form see error message :"+message +" "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
 		}
 	}
-
-	//Login To site function
-	public void LoginToPage(String Username,String pass,WebElement Button,WebElement EmailField,WebElement PasswordField) throws Exception
-	{
-		try
-		{
-			EmailField.sendKeys(Username);  // 
-			logger.info("Enter the User name "+Username);
-			test.log(LogStatus.PASS, "Enter User name: "+ Username +" with success ");
-			PasswordField.sendKeys(pass);   // 
-			logger.info("Enter the Password "+ pass);
-			test.log(LogStatus.PASS, "Enter Password: "+ pass +" with success ");
-			Button.click();
-			logger.info("button was clicked");
-			test.log(LogStatus.PASS, "Clicked on the submit button");
-		}
-		catch(Exception e)
-		{
-			logger.error("Something went wrong while trying to log in");
-			test.log(LogStatus.FAIL,"Failed to login to site !! see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
-		}
-	}
-
-
 }
 
 

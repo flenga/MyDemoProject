@@ -1,26 +1,17 @@
 package Page_Object_Factory;
-//import java.util.List;
-
-//import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-
 import com.relevantcodes.extentreports.LogStatus;
-
-//import org.openqa.selenium.support.ui.ExpectedConditions;
-//import org.openqa.selenium.support.ui.WebDriverWait;
-import org.junit.Assert;
 import Project_Utilities.Base_Project;
 import Project_Utilities.Project_CommonFunction;
-//import junit.framework.Assert;
+
 public class SearchArea_Factory extends Base_Project
 {
 	
 	public String ShoppingCartAfter;
 	public String ValuToreport;
-	//public WebDriver driver;
 	Project_CommonFunction cf = new Project_CommonFunction();
 	SearchToShopping_Factory St=new SearchToShopping_Factory();
 	
@@ -48,47 +39,39 @@ public class SearchArea_Factory extends Base_Project
 	@FindBy(how = How.CSS,using="li#list")// #list
 	public WebElement ListView;
 	
-	//@FindBy(how = How.CSS,using= "span.cross[title=’Close window’]") 
 	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[1]/span[1]") 
 	public WebElement CloseDiv1;
 	
-	//@FindBy(how = How.CSS,using= "span.ajax_cart_product_txt_s") // 
 	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[2]/span") 
 	public WebElement TitleShoppingDiv1;  //Blouse
 	
 	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[2]/div[1]/span") 
 	public WebElement TotalProducts1;
 	
-	//@FindBy(how = How.CSS,using= "span.ajax_cart_shipping_cost unvisible") 
 	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[2]/div[2]/span") 
 	public WebElement Totalshipping; 
-	//*[@id='layer_cart']/div[1]/div[2]/div[3]/span
+	
 	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[2]/div[3]/span") 
-	//@FindBy(how = How.CSS,using= "span.ajax_block_cart_total") 
+	
 	public WebElement TotalIncluds;
 
 	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart_product_title']") 
-	//@FindBy(how = How.ID,using= "layer_cart_product_title") 
+	
 	public WebElement ProductTitle;
 	
 	public SearchArea_Factory(WebDriver driver) // 
 	{
 		SearchArea_Factory.driver = driver;
 	}
-	
-	
+		
 	public void SearchForAnItemAndAddToShoppingCart() throws Exception
 	{
-	 String ShoppingCart1 =ShoppingCart.getText() ;//;.getText());
-	 String Price =ItemPrice.getText();
-	
-	//cf.SearchForAnItem(SearchBar, "Blouse");
-	//SearchBar.sendKeys("Blouse");
+	String ShoppingCart1 =ShoppingCart.getText() ;
+		
 	ValuToreport=SearchBar.getAttribute("placeholder");
 	cf.SendKeyAction(SearchBar, "Blouse",ValuToreport);
 	ValuToreport=ShoppingCart.getText();
 	cf.ClickOnElement(SubmitButton,ValuToreport);//Need to verify that issue flow search for an item click on the element add to cart verify few elements on page check that shopping cart had changed
-	
 	
 	Thread.sleep(1500);
 	cf.SearchResult(SearchResult);

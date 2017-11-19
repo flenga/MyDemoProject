@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 //import org.openqa.selenium.JavascriptExecutor;
 
 //import org.sikuli.script.*;
-	//import org.testng.annotations.DataProvider;
+//import org.testng.annotations.DataProvider;
 //import org.xml.sax.SAXException;
 
 import Page_Object_Factory.ContactUs_Factory;
@@ -25,7 +25,7 @@ import Page_Object_Factory.SearchArea_Factory;
 import Page_Object_Factory.SearchToShopping_Factory;
 import Page_Object_Factory.Sign_In_Factory;
 import Project_Utilities.Base_Project;
-		
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING) 
 
 public class Project_Run_Tests extends Base_Project
@@ -41,48 +41,37 @@ public class Project_Run_Tests extends Base_Project
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception 
 	{
-//	System.setProperty(getData("driverChrome"),getData("ChromeDriverPath"));
-//	driver =new ChromeDriver();
-//	driver.manage().window().maximize();
-//	driver.get(getData("URL"));
-//	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//	screen = new Screen();
-	BrowserSwitch(getData("BrowserType"));
-	InstanceReports();
-	fsf = PageFactory.initElements(driver, Sign_In_Factory.class);
-	Hef = PageFactory.initElements(driver, Header_Factory.class);
-	Fef = PageFactory.initElements(driver, Footer_Factory.class);
-	Ref = PageFactory.initElements(driver, Registration_Factory.class);
-	Cuf = PageFactory.initElements(driver, ContactUs_Factory.class);
-	Osf = PageFactory.initElements(driver, OurStores_Factory.class);
-	Saf = PageFactory.initElements(driver, SearchArea_Factory.class);
-	Ssc = PageFactory.initElements(driver, SearchToShopping_Factory.class);
+		InitBrowser(getData("BrowserType"));
+		InstanceReports();
+		fsf = PageFactory.initElements(driver, Sign_In_Factory.class);
+		Hef = PageFactory.initElements(driver, Header_Factory.class);
+		Fef = PageFactory.initElements(driver, Footer_Factory.class);
+		Ref = PageFactory.initElements(driver, Registration_Factory.class);
+		Cuf = PageFactory.initElements(driver, ContactUs_Factory.class);
+		Osf = PageFactory.initElements(driver, OurStores_Factory.class);
+		Saf = PageFactory.initElements(driver, SearchArea_Factory.class);
+		Ssc = PageFactory.initElements(driver, SearchToShopping_Factory.class);
 	}
-	@Before
-	public void setUp() throws Exception 
-	{
-		
-	}
-	
+
 	@Test
 	public void test_1_Storelocator() throws Exception
 	{
-		
+
 		initReportTest("First test","Verify:Our Stores");
 		logger.info("Store locator - First test");
-		Osf.ClickOnOneOfTheStores() ;
+		Osf.OpenOneOfTheStoresLocationCheckingAddressAndDialog() ;
 	}
- 
+
 	@Test
-	
+
 	public void test_2_SignIn() throws Exception 
 	{
-	 	initReportTest("Second test","Verify:The login page of The Site ");
-	 	logger.info("Sign in -second test");
+		initReportTest("Second test","Verify:The login page of The Site ");
+		logger.info("Sign in -second test");
 		Hef.ClickOnSignIn();
 		fsf.LoginToPage();
 	}
-	
+
 	@Test
 	public void test_3_SendContactUsForm() throws Exception 
 	{
@@ -92,7 +81,7 @@ public class Project_Run_Tests extends Base_Project
 		Cuf.SendAmessage();
 		Hef.ClickOnLogoSite();
 	}
-	
+
 	@Test
 	public void test_4_SearchForItem() throws Exception 
 	{
@@ -105,16 +94,16 @@ public class Project_Run_Tests extends Base_Project
 	public void doAfterTest()
 	{
 		FinalizedreportTest();
-	
+
 	}
 	@AfterClass
-	
+
 	public static void setUpAfterClass()
 	{
 		FinalizeExtentReport();
 		driver.quit();
-		
+
 	}
-	
+
 
 }

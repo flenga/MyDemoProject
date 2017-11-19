@@ -11,14 +11,10 @@ public class Footer_Factory extends Base_Project
 {
 	Project_CommonFunction cf = new Project_CommonFunction();
 	//public WebDriver driver;
-	
-	
-	
-	//@FindBy(how = How.XPATH, using= "//*[@id='block_various_links_footer']/ul/li[4]/a") //From The footer   //*[@id='block_various_links_footer']/ul/li[4]
-	@FindBy(how = How.LINK_TEXT, using= "Our stores")  //css a[title='Our stores']    
+	public String ValuToreport;
+	@FindBy(how = How.LINK_TEXT, using= "Our stores")   
 	public WebElement StoreLink;
 	
-	// Need to set functions to click on The links in the header according to test case
 	public  Footer_Factory (WebDriver driver) 
 	{
 		Footer_Factory.driver = driver;
@@ -29,6 +25,7 @@ public class Footer_Factory extends Base_Project
 	
 	public void ClickOnStoreLink() throws Exception 
 	{
-		cf.ClickOnLinkInFooter(StoreLink);
+		ValuToreport=StoreLink.getText();
+		cf.ClickOnElement(StoreLink,ValuToreport );
 	}
 }
