@@ -51,7 +51,11 @@ public class Sign_In_Factory  extends Base_Project
 
 	public void LoginToPage() throws Exception 
 	{
-		
+		/*
+		*Reading from Excel file and get the data from this file, wrkbook.getSheet(1) 
+		*refer to the second tab in the file, running through a loop
+		*to collect the data getCell(4,i) the first number represent the column and the second value represent the row.   
+		*/
 		cf.ReadExcelFile();
 		int rowcount=cf.wrkbook.getSheet(1).getRows();
 		String ExpectedColor;
@@ -67,7 +71,8 @@ public class Sign_In_Factory  extends Base_Project
 				ValuToreport=Password.getAttribute("name");
 				cf.SendKeyAction(Password,cf.wrkbook.getSheet(1).getCell(1,i).getContents(),ValuToreport);	
 				SignInButton.click();
-				if("green".equals(ExpectedColor))//
+				//This check if the error is green or red and according to the color received continue!!
+				if(ExpectedColor.equals("green"))
 				{
 					cf.NoErrorMessageExsit(cf.verifyElementExist(SuccessLogin), ExpectedColor,ExpectedMessage1);
 					logger.info("Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents()+", and Password: "+cf.wrkbook.getSheet(1).getCell(1,i).getContents()+"were OK");

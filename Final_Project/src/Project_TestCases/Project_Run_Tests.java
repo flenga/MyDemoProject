@@ -58,7 +58,7 @@ public class Project_Run_Tests extends Base_Project
 	{
 
 		initReportTest("First test","Verify:Our Stores");
-		logger.info("Store locator - First test");
+		StartTest("Store locator - Start test");
 		Osf.OpenOneOfTheStoresLocationCheckingAddressAndDialog() ;
 	}
 
@@ -67,7 +67,7 @@ public class Project_Run_Tests extends Base_Project
 	public void test_2_SignIn() throws Exception 
 	{
 		initReportTest("Second test","Verify:The login page of The Site ");
-		logger.info("Sign in -second test");
+		StartTest("Sign in - Start test");
 		Hef.ClickOnSignIn();
 		fsf.LoginToPage();
 	}
@@ -76,7 +76,7 @@ public class Project_Run_Tests extends Base_Project
 	public void test_3_SendContactUsForm() throws Exception 
 	{
 		initReportTest("Third test","Verify:Contact Us");
-		logger.info("Send Contact Us Form -Third test");
+		StartTest("Send Contact Us Form - Start test");
 		Hef.ClickOnContactUs();
 		Cuf.SendAmessage();
 		Hef.ClickOnLogoSite();
@@ -86,7 +86,7 @@ public class Project_Run_Tests extends Base_Project
 	public void test_4_SearchForItem() throws Exception 
 	{
 		initReportTest("Fourth test","Verify:Search and Shopping cart");
-		logger.info("Search and Shopping cart- Fourth test");
+		StartTest("Verify:Search and Shopping cart- Start test");
 		Saf.SearchForAnItemAndAddToShoppingCart();
 	}
 

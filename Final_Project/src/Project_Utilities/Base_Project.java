@@ -27,6 +27,8 @@ import org.xml.sax.SAXException;
 import org.sikuli.script.Screen;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 import java.time.Instant;
@@ -78,6 +80,13 @@ public class Base_Project
 	}
 	//*********************end Report function******************************* 
 
+	//Adding report to log and reports when test case start.
+	public static void StartTest(String OpeNTest)
+	{
+		logger.info(OpeNTest);
+		test.log(LogStatus.PASS, OpeNTest);
+	}
+	
 	//Screenshot function
 	public static String getscreenshot() throws Exception 
 	{

@@ -107,40 +107,7 @@ public class Project_CommonFunction extends Base_Project
 		Month=temDate[1];
 		Year=temDate[2];
 	}
-/*
-	//Click on one of the link in the header
-	public static void ClickOnLinkInHeader(WebElement Headerlink) throws Exception
-	{
-		try
-		{
-			Headerlink.click();
-			Thread.sleep(500);
-			logger.info("Clicked on the Element: "+ Headerlink.getText() +" with success ");
-			test.log(LogStatus.PASS, "Clicked on the Element: "+ Headerlink.getText() +" with success ");
-		}
-		catch(Exception e)
-		{
-			logger.error("Something went wrong while trying to log in");
-			test.log(LogStatus.FAIL,"Failed to Click on link !! see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
-		}
-	}
-	//Click on one of the links in the footer
-	public void ClickOnLinkInFooter(WebElement Footerlink) throws Exception
-	{
-		try
-		{
-			Footerlink.click();
-			Thread.sleep(500);
-			logger.info("Clicked on the Element: "+ Footerlink.getText() +" with success ");
-			test.log(LogStatus.PASS, "Clicked on the Element: "+ Footerlink.getText() +" with success ");
-		}
-		catch(Exception e)
-		{
-			logger.error("Failed to Click on link !! "+e.getMessage());
-			test.log(LogStatus.FAIL,"Failed to Click on link !! see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
-		}
-	}
-*/
+
 	//Scroll down
 	public void test_Scroll_Page_Down() throws Exception 
 	{
@@ -163,7 +130,6 @@ public class Project_CommonFunction extends Base_Project
 		{
 			logger.error("Failed to click on the element: \""+stringToAddtoReport+"\"  !! see screenshot: "+e.getMessage() );
 			test.log(LogStatus.FAIL,"Failed to click on the element: \""+stringToAddtoReport+"\" !! see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
-
 		}
 	}
 
@@ -181,8 +147,8 @@ public class Project_CommonFunction extends Base_Project
 			logger.error("Failed to Send value : \"" +ValueToSend+"\" from field \"" +ValueToreport+"\"!! "+e.getMessage() );
 			test.log(LogStatus.FAIL,"Failed to Send value : \"" +ValueToSend+"\" from field \"" +ValueToreport+"\" !! see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
 		}
-
 	}
+
 	//waitToElement
 	public void waitToElement(WebElement ElementToWait) throws Exception
 	{
@@ -225,7 +191,6 @@ public class Project_CommonFunction extends Base_Project
 			Assert.assertNotEquals(Expected, Actual);
 			logger.info("Assertion  was succed ");
 			test.log(LogStatus.PASS, "Assertion  was succed");
-
 		}
 		catch(AssertionError e)
 		{
@@ -241,7 +206,6 @@ public class Project_CommonFunction extends Base_Project
 		String message=Message.getText();
 		try
 		{
-			//System.out.println("The message: "+message);
 			Message.isDisplayed();
 			Assert.assertEquals(message,string);
 			logger.info("The message that appear was :"+message);
@@ -251,6 +215,11 @@ public class Project_CommonFunction extends Base_Project
 		{
 			logger.error("There was an error while sending the form see error message: "+message +" "+e.getMessage());
 			test.log(LogStatus.FAIL, "There was an error while sending the form see error message: "+message +" "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
+		}
+		catch(AssertionError e)
+		{
+			logger.error("The messages are not equal: "+ message+ "And the second value is "+string );
+			test.log(LogStatus.FAIL,"assertion failed: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
 		}
 	}
 
@@ -289,6 +258,7 @@ public class Project_CommonFunction extends Base_Project
 			logger.error("The element: "+ElementExistInPage+" doesn't exsit on page : "+e.getMessage());
 			test.log(LogStatus.FAIL,"The element: "+ElementExistInPage+" doesn't exsit on page !! see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
 		}
+
 	}
 
 	//Clicking on image using Sikuli
@@ -316,33 +286,17 @@ public class Project_CommonFunction extends Base_Project
 		try
 		{
 			screen.find(getData("ImagePath")+imageName);
+			Thread.sleep(500);
 			logger.info("The image we looked for exist!!");
 			test.log(LogStatus.PASS, "Element "+imageNameToVerify+"Exists !");
-
 		}
 		catch (Exception e)
 		{
 			logger.error("The image : "+imageNameToVerify+" doesn't exsit on page : "+e.getMessage());
 			test.log(LogStatus.FAIL, "Element NOT Exists ! , see Screen Shot: "+e.getMessage()+" " + test.addScreenCapture(getscreenshot()));
-
-		}
-
-	}
-
-	//Search for an Item 
-	public void SearchForAnItem(WebElement SearchField,String SearchItem) throws Exception
-	{
-		try {
-			SearchField.sendKeys(SearchItem);
-			logger.info("Search for : "+SearchItem+" !!");
-			test.log(LogStatus.PASS, "Search for :  "+SearchItem+"  !");
-		} catch (Exception e) 
-		{
-			logger.error("The search for : "+SearchItem+" Failed : "+e.getMessage());
-			test.log(LogStatus.FAIL, "The search for : "+SearchItem+" Failed, see Screen Shot: "+e.getMessage()+" " + test.addScreenCapture(getscreenshot()));
-			e.printStackTrace();
 		}
 	}
+
 
 	public void SearchResult(WebElement Message) throws Exception
 	{
@@ -359,6 +313,11 @@ public class Project_CommonFunction extends Base_Project
 		{
 			logger.error("There was an error while sending the form see error message :"+message +" "+e.getMessage());
 			test.log(LogStatus.FAIL, "There was an error while sending the form see error message :"+message +" "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
+		}
+		catch(AssertionError e)
+		{
+			logger.error("The messages are equal for before and after "+ message+ "And the second value is "+Expectedstring );
+			test.log(LogStatus.FAIL,"assertion failed: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
 		}
 	}
 }

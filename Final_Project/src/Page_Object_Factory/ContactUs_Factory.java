@@ -54,8 +54,14 @@ public class ContactUs_Factory  extends Base_Project
 	
 	public void SendAmessage() throws Exception 
 	{
+		/*
+		 Reading from Excel file and get the data from this file, wrkbook.getSheet(0) 
+		 refer to the first tab in the file, running through a loop
+		 to collect the data getCell(4,i) the first number represent the column
+		 and the second value represent the row. 
+		*/
 		cf.ReadExcelFile();
-		int rowcount=cf.wrkbook.getSheet(1 ).getRows();
+		int rowcount=cf.wrkbook.getSheet(1).getRows();
 		for(int i=1;i<=rowcount;i++)
 		{
 			try 
@@ -78,9 +84,10 @@ public class ContactUs_Factory  extends Base_Project
 				Thread.sleep(3000);
 				logger.info("ContactUs form submitted!");
 				test.log(LogStatus.PASS, "ContactUs form submitted!");
+				//This check if the error is green or red and according to the color received continue!!
 				if(ExpectedColor1.equals("red"))
 				{
-					cf.NoErrorMessageExsit(cf.verifyElementExist(ErrorDiv), ExpectedColor1,ExpectedMessage1);//"Invalid email address.");   message:"The message cannot be blank."  this should be change to ddt mechanism need to create 
+					cf.NoErrorMessageExsit(cf.verifyElementExist(ErrorDiv), ExpectedColor1,ExpectedMessage1);
 				}	
 				else
 				{
