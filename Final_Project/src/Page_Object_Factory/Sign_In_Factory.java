@@ -30,7 +30,7 @@ public class Sign_In_Factory  extends Base_Project
 	@FindBy(how = How.ID, using= "SubmitLogin")  
 	public WebElement SignInButton;
 
-	@FindBy(how = How.XPATH, using= "//*[@id='center_column']/div[1]")
+	@FindBy(how = How.XPATH, using= "1//*[@id='center_column']/div[1]") //@FindBy(how = How.XPATH, using= "//*[@id='center_column']/div[1]")
 	public WebElement ErrorForSignIn;
 
 	@FindBy(how = How.XPATH, using= "//*[@id='center_column']/div[1]/p")
@@ -71,10 +71,14 @@ public class Sign_In_Factory  extends Base_Project
 				ValuToreport=Password.getAttribute("name");
 				cf.SendKeyAction(Password,cf.wrkbook.getSheet(1).getCell(1,i).getContents(),ValuToreport);	
 				SignInButton.click();
-				//This check if the error is green or red and according to the color received continue!!
+				/*
+				 * This check if the error is green or red and according to the color 
+				 * received continue!!
+				 */
+				
 				if(ExpectedColor.equals("green"))
 				{
-					cf.NoErrorMessageExsit(cf.verifyElementExist(SuccessLogin), ExpectedColor,ExpectedMessage1);
+					cf.NoErrorMessageExsit(SuccessLogin, ExpectedColor,ExpectedMessage1);
 					logger.info("Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents()+", and Password: "+cf.wrkbook.getSheet(1).getCell(1,i).getContents()+"were OK");
 					test.log(LogStatus.PASS, "Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents()+", and Password: "+cf.wrkbook.getSheet(1).getCell(1,i).getContents()+"were OK and user login to ");
 					
@@ -86,7 +90,7 @@ public class Sign_In_Factory  extends Base_Project
 				}
 				else 										
 				{
-					cf.NoErrorMessageExsit(cf.verifyElementExist(ErrorForSignInSpecific), ExpectedColor, ExpectedMessage1);
+					cf.NoErrorMessageExsit(ErrorForSignInSpecific, ExpectedColor, ExpectedMessage1);
 					logger.info("Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents()+", and Password: "+cf.wrkbook.getSheet(1).getCell(1,i).getContents()+"were OK - Which FAILED to login");
 					test.log(LogStatus.PASS, "Cradiantial "+ cf.wrkbook.getSheet(1).getCell(0,i).getContents()+", and Password: "+cf.wrkbook.getSheet(1).getCell(1,i).getContents()+"were OK - Which FAILED to login");
 					ValuToreport=SignIn.getAttribute("title");

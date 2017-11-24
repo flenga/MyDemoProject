@@ -3,6 +3,8 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 //import java.sql.Connection;
 //import java.sql.DriverManager;
@@ -35,23 +37,39 @@ import java.time.Instant;
 public class Base_Project
 {
 	public final static DateFormat Calendar = null;
-	public static WebDriver driver=null;//
-	//public static WebDriver driver;
-	public static ExtentReports extent;//
+	public static WebDriver driver=null;
+	public static ExtentReports extent;
 	public static ExtentTest test;
 	static Instant instant = Instant.now();
-	static long localDate = instant.getEpochSecond();
-	public static String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(Calendar.getInstance().getCalendar().getTime());	
+	public static long localDate = System.currentTimeMillis()/1000;// instant.getEpochSecond(); file:///E:/Project_Reports/2017.11.24.14.41.14-1511527274.png
+	//public static String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(Calendar.getInstance().getCalendar().getTime());	file:///E:/Project_Reports/2017.11.24.14.41.14-1511527274.png
+	public static String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());	
+
 	public static Screen screen;
 	public static final Logger logger=Logger.getLogger(Base_Project.class.getName());
+	public static String WhichBrowserType;
+	
 	public void loadlog4j()
-		{
-		DOMConfigurator.configure("log4j.xml");
-		}
+	{
+			DOMConfigurator.configure("log4j.xml");
+	}
 
+	//Screenshot function
+	public  String getscreenshot() throws IOException, ParserConfigurationException, SAXException
+
+	{
+		//String SsPath=getData("ScreenshotsReportFilePath")+ timeStamp +"-"+localDate+".png";	 
+	//	String SsPath=getData("ScreenshotsReportFilePath")+ timeStamp +".png";	
+		String SsPath=getData("ScreenshotsReportFilePath")+ timeStamp()+localDate +".png";	
+		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(scrFile, new File(SsPath));
+		return SsPath;
+	}
+	
 	//Reading and Connection to XML file
 	public static String getData (String nodeName) throws ParserConfigurationException, SAXException, IOException
 	{
+		
 		File fXmlFile = new File("External_Files/XML/Project_Conf.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -61,7 +79,7 @@ public class Base_Project
 	}
 	
 	//************************Reports function*********************************
-	public static void  InstanceReports() throws ParserConfigurationException, SAXException, IOException
+	public static  void  InstanceReports() throws ParserConfigurationException, SAXException, IOException
 	{
 		extent= new ExtentReports(getData("ReportFilePath") + timeStamp +"-"+localDate+getData("Reporfilename"),true);//Reporfilenamet
 	}
@@ -87,14 +105,13 @@ public class Base_Project
 		test.log(LogStatus.PASS, OpeNTest);
 	}
 	
-	//Screenshot function
-	public static String getscreenshot() throws Exception 
-	{
-		String SsPath=getData("ReportFilePath")+ timeStamp +"-"+localDate+".png";	
-		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(scrFile, new File(SsPath));
-		return SsPath;
-	}
+	//Adding report to log and reports when test case End.
+		public static void EndTest(String OpeNTest)
+		{
+			logger.info(OpeNTest);
+			test.log(LogStatus.INFO, OpeNTest);
+		}
+	
 
 	//Switch Browser
 	public static void InitBrowser(String BrowserType) throws ParserConfigurationException, SAXException, IOException
@@ -114,8 +131,9 @@ public class Base_Project
 		logger.info("Open brwoser :"+BrowserType);
 		driver.manage().window().maximize();
 		driver.get(getData("URL"));
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		screen = new Screen();
+		WhichBrowserType=getData("BrowserType");
 	}	
 	public static WebDriver ChromeDriver() throws ParserConfigurationException, SAXException, IOException
 	{
@@ -134,6 +152,20 @@ public class Base_Project
 		System.setProperty("webdriver.ie.driver",getData("IEDriverPath"));
 			WebDriver driverIE= new InternetExplorerDriver();
 		return driverIE;
+	}
+
+	public int getRandomNumber()
+	{
+		Random rand = new Random();
+		//int  n = rand.nextInt(999999) + 1000;
+		return rand.nextInt(999999) + 1000;
+	}
+
+	public  String timeStamp()
+	{
+	 String ThetimeStamp= new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+	return ThetimeStamp;	
+	
 	}
 
 }

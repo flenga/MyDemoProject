@@ -84,14 +84,17 @@ public class ContactUs_Factory  extends Base_Project
 				Thread.sleep(3000);
 				logger.info("ContactUs form submitted!");
 				test.log(LogStatus.PASS, "ContactUs form submitted!");
-				//This check if the error is green or red and according to the color received continue!!
+				/*
+				 * This check if the error is green or red and according to the color 
+				 * received continue!!
+				 */
 				if(ExpectedColor1.equals("red"))
 				{
-					cf.NoErrorMessageExsit(cf.verifyElementExist(ErrorDiv), ExpectedColor1,ExpectedMessage1);
+					cf.NoErrorMessageExsit(ErrorDiv, ExpectedColor1,ExpectedMessage1);
 				}	
 				else
 				{
-					cf.NoErrorMessageExsit(cf.verifyElementExist(SuccessDiv), ExpectedColor1,ExpectedMessage1);
+					cf.NoErrorMessageExsit(SuccessDiv, ExpectedColor1,ExpectedMessage1);
 				}
 				if(i<rowcount)
 				{

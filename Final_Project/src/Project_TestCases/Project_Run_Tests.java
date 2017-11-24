@@ -38,10 +38,12 @@ public class Project_Run_Tests extends Base_Project
 	static OurStores_Factory Osf;
 	static SearchArea_Factory Saf;
 	static SearchToShopping_Factory Ssc;
+	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception 
 	{
 		InitBrowser(getData("BrowserType"));
+		
 		InstanceReports();
 		fsf = PageFactory.initElements(driver, Sign_In_Factory.class);
 		Hef = PageFactory.initElements(driver, Header_Factory.class);
@@ -52,22 +54,21 @@ public class Project_Run_Tests extends Base_Project
 		Saf = PageFactory.initElements(driver, SearchArea_Factory.class);
 		Ssc = PageFactory.initElements(driver, SearchToShopping_Factory.class);
 	}
-
+	
 	@Test
 	public void test_1_Storelocator() throws Exception
 	{
-
 		initReportTest("First test","Verify:Our Stores");
-		StartTest("Store locator - Start test");
-		Osf.OpenOneOfTheStoresLocationCheckingAddressAndDialog() ;
+		StartTest("Store locator - Start test #1");
+		Osf.OpenOneOfTheStoresLocationCheckingAddressAndDialog();
 	}
 
 	@Test
-
+	
 	public void test_2_SignIn() throws Exception 
 	{
 		initReportTest("Second test","Verify:The login page of The Site ");
-		StartTest("Sign in - Start test");
+		StartTest("Sign in - Start test #2");
 		Hef.ClickOnSignIn();
 		fsf.LoginToPage();
 	}
@@ -76,23 +77,25 @@ public class Project_Run_Tests extends Base_Project
 	public void test_3_SendContactUsForm() throws Exception 
 	{
 		initReportTest("Third test","Verify:Contact Us");
-		StartTest("Send Contact Us Form - Start test");
+		StartTest("Send Contact Us Form - Start test #3");
 		Hef.ClickOnContactUs();
 		Cuf.SendAmessage();
 		Hef.ClickOnLogoSite();
 	}
-
+	//file:///E:/Project_Reports/1937-11-24_14-24-44-1511526284.png
 	@Test
-	public void test_4_SearchForItem() throws Exception 
+	public void test_4_SearchForAnItemAndaddToCart() throws Exception 
 	{
 		initReportTest("Fourth test","Verify:Search and Shopping cart");
-		StartTest("Verify:Search and Shopping cart- Start test");
+		StartTest("Verify:Search and Shopping cart- Start test #4");
 		Saf.SearchForAnItemAndAddToShoppingCart();
+		Ssc.VerifyElementIndiv();
 	}
 
 	@After
-	public void doAfterTest()
+	public void DoAfterTest()
 	{
+		EndTest("End of Test!!!");
 		FinalizedreportTest();
 
 	}

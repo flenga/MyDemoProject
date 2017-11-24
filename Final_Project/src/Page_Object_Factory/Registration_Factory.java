@@ -51,7 +51,7 @@ public class Registration_Factory extends Base_Project
 		Registration_Factory.driver = driver;
 	}
 	
-	public void FindElementsOnPage() throws Exception
+	public void FindElementsOnPage() throws Throwable
 	{
 		
 		cf.SplitTheDate("23/8/1956");

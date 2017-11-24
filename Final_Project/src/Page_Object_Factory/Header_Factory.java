@@ -31,7 +31,7 @@ Project_CommonFunction cf = new Project_CommonFunction();
 	// Need to set functions to click on The links in the header according to test case
 	public  Header_Factory () 
 	{
-		Header_Factory.driver = driver;
+		this.driver = driver;
 
 	}
 	
