@@ -9696,3 +9696,229 @@ Session ID: 46a1f0940718a3b2d847dd54e7fe8ca6
 2017-11-25 00:48:56,539 INFO  [Project_CommonFunction] - Assertion  was succed 
 2017-11-25 00:48:56,557 INFO  [Project_CommonFunction] - Assertion  was succed 
 2017-11-25 00:48:56,579 INFO  [Base_Project] - End of Test!!!
+2017-11-25 01:04:22,741 INFO  [Base_Project] - Open brwoser :Chrome
+2017-11-25 01:04:31,092 INFO  [Base_Project] - Store locator - Start test #1
+2017-11-25 01:04:34,480 INFO  [Project_CommonFunction] - Clicked on the Element: "Our stores" with success 
+2017-11-25 01:04:44,641 ERROR [Project_CommonFunction] - The Element: [[ChromeDriver: chrome on XP (dcd13d7de7e5f19f6b151b643f0f7c93)] -> xpath: //*[@id='map']/div/div] is not displayed on page!!  Expected condition failed: waiting for element ([[ChromeDriver: chrome on XP (dcd13d7de7e5f19f6b151b643f0f7c93)] -> xpath: //*[@id='map']/div/div]) to be selected (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: 'unknown', revision: 'f233563', time: '2016-07-28 17:11:26 -0700'
+System info: host: 'lenga-PC', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\lenga\AppData\Local\Temp\scoped_dir19608_4148}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.94, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: dcd13d7de7e5f19f6b151b643f0f7c93
+2017-11-25 01:04:46,189 INFO  [Project_CommonFunction] - The image StoreToPNG.png exist!!
+2017-11-25 01:04:47,589 INFO  [Project_CommonFunction] - Clicked on Image:  StoreToPNG.png !!
+2017-11-25 01:04:48,426 INFO  [Project_CommonFunction] - The image StoreDirectionsMiami.png exist!!
+2017-11-25 01:04:49,302 INFO  [Project_CommonFunction] - The image ClosePopup.png exist!!
+2017-11-25 01:04:50,676 INFO  [Project_CommonFunction] - Clicked on Image:  ClosePopup.png !!
+2017-11-25 01:04:50,676 INFO  [Base_Project] - End of Test!!!
+2017-11-25 01:04:50,681 INFO  [Base_Project] - Sign in - Start test #2
+2017-11-25 01:04:52,556 INFO  [Project_CommonFunction] - Clicked on the Element: "Sign in" with success 
+2017-11-25 01:04:52,658 INFO  [Project_CommonFunction] - succeed to read from Excel 
+2017-11-25 01:04:52,936 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "publisherpete4@gmail.com"
+2017-11-25 01:04:53,074 INFO  [Project_CommonFunction] - Succeeded to send from field :"passwd" the value: "qwerty321"
+2017-11-25 01:04:54,603 INFO  [Project_CommonFunction] - The message that appear was :Welcome to your account. Here you can manage all of your personal information and orders.
+2017-11-25 01:04:54,603 INFO  [Base_Project] - Cradiantial publisherpete4@gmail.com, and Password: qwerty321were OK
+2017-11-25 01:04:56,291 INFO  [Base_Project] - Clicked on signout
+2017-11-25 01:04:56,489 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "publisherpete@gmail.com"
+2017-11-25 01:04:56,594 INFO  [Project_CommonFunction] - Succeeded to send from field :"passwd" the value: "123456"
+2017-11-25 01:04:57,636 INFO  [Project_CommonFunction] - The message that appear was :Authentication failed.
+2017-11-25 01:04:57,636 INFO  [Base_Project] - Cradiantial publisherpete@gmail.com, and Password: 123456were OK - Which FAILED to login
+2017-11-25 01:04:58,860 INFO  [Project_CommonFunction] - Clicked on the Element: "Log in to your customer account" with success 
+2017-11-25 01:04:58,861 INFO  [Base_Project] - End of Test!!!
+2017-11-25 01:04:58,861 INFO  [Base_Project] - Send Contact Us Form - Start test #3
+2017-11-25 01:05:00,088 INFO  [Project_CommonFunction] - Clicked on the Element: "Contact us" with success 
+2017-11-25 01:05:00,146 INFO  [Project_CommonFunction] - succeed to read from Excel 
+2017-11-25 01:05:00,411 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-11-25 01:05:00,626 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisherpetemail.com"
+2017-11-25 01:05:00,756 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-11-25 01:05:00,886 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-11-25 01:05:07,218 INFO  [Project_CommonFunction] - This Action succeed.
+2017-11-25 01:05:07,412 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-11-25 01:05:08,550 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-11-25 01:05:11,551 INFO  [Base_Project] - ContactUs form submitted!
+2017-11-25 01:05:11,655 INFO  [Project_CommonFunction] - The message that appear was :Invalid email address.
+2017-11-25 01:05:12,808 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-11-25 01:05:12,975 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-11-25 01:05:13,085 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-11-25 01:05:13,194 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-11-25 01:05:19,498 INFO  [Project_CommonFunction] - This Action succeed.
+2017-11-25 01:05:19,593 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: ""
+2017-11-25 01:05:20,701 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-11-25 01:05:23,702 INFO  [Base_Project] - ContactUs form submitted!
+2017-11-25 01:05:23,800 INFO  [Project_CommonFunction] - The message that appear was :The message cannot be blank.
+2017-11-25 01:05:25,133 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-11-25 01:05:25,300 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-11-25 01:05:25,414 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-11-25 01:05:25,535 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-11-25 01:05:31,839 INFO  [Project_CommonFunction] - This Action succeed.
+2017-11-25 01:05:32,006 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-11-25 01:05:34,609 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-11-25 01:05:37,611 INFO  [Base_Project] - ContactUs form submitted!
+2017-11-25 01:05:37,703 INFO  [Project_CommonFunction] - The message that appear was :Your message has been successfully sent to our team.
+2017-11-25 01:05:40,265 INFO  [Project_CommonFunction] - Clicked on the Element: "" with success 
+2017-11-25 01:05:40,265 INFO  [Base_Project] - End of Test!!!
+2017-11-25 01:05:40,266 INFO  [Base_Project] - Verify:Search and Shopping cart- Start test #4
+2017-11-25 01:05:40,398 INFO  [Project_CommonFunction] - Succeeded to send from field :"Search" the value: "Blouse"
+2017-11-25 01:05:41,979 INFO  [Project_CommonFunction] - Clicked on the Element: "Cart (empty)" with success 
+2017-11-25 01:05:43,580 INFO  [Project_CommonFunction] - The message that appear was :1 result has been found.
+2017-11-25 01:05:44,044 INFO  [Project_CommonFunction] - Clicked on the Element: "Add to cart" with success 
+2017-11-25 01:05:55,680 ERROR [Project_CommonFunction] - The Element: [[ChromeDriver: chrome on XP (dcd13d7de7e5f19f6b151b643f0f7c93)] -> xpath: //*[@id='layer_cart']/div[1]/div[2]/span] is not displayed on page!!  Expected condition failed: waiting for element ([[ChromeDriver: chrome on XP (dcd13d7de7e5f19f6b151b643f0f7c93)] -> xpath: //*[@id='layer_cart']/div[1]/div[2]/span]) to be selected (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: 'unknown', revision: 'f233563', time: '2016-07-28 17:11:26 -0700'
+System info: host: 'lenga-PC', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\lenga\AppData\Local\Temp\scoped_dir19608_4148}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.94, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: dcd13d7de7e5f19f6b151b643f0f7c93
+2017-11-25 01:05:56,146 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:05:56,190 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:05:56,238 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:05:56,282 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:05:56,336 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:05:56,336 INFO  [Base_Project] - The Elements are displayed on page!!
+2017-11-25 01:06:06,456 ERROR [Project_CommonFunction] - The Element: [[ChromeDriver: chrome on XP (dcd13d7de7e5f19f6b151b643f0f7c93)] -> xpath: //*[@id='layer_cart']/div[1]/div[2]/span/span[2]] is not displayed on page!!  Expected condition failed: waiting for element ([[ChromeDriver: chrome on XP (dcd13d7de7e5f19f6b151b643f0f7c93)] -> xpath: //*[@id='layer_cart']/div[1]/div[2]/span/span[2]]) to be selected (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: 'unknown', revision: 'f233563', time: '2016-07-28 17:11:26 -0700'
+System info: host: 'lenga-PC', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\lenga\AppData\Local\Temp\scoped_dir19608_4148}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.94, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: dcd13d7de7e5f19f6b151b643f0f7c93
+2017-11-25 01:06:06,966 INFO  [Project_CommonFunction] - Element name: There is 1 item in your cart., succeeded to loaded!!!
+2017-11-25 01:06:07,009 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:06:07,442 ERROR [Project_CommonFunction] - Something went wrong while trying to Assert the two values: $24.00 and second one is: $24.001
+2017-11-25 01:06:07,870 ERROR [Project_CommonFunction] - Something went wrong while trying to Assert the two values: $7.00 and second one is: $17.00
+2017-11-25 01:06:07,889 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:06:07,911 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:06:07,934 INFO  [Base_Project] - End of Test!!!
+2017-11-25 01:11:18,263 INFO  [Base_Project] - Open brwoser :Chrome
+2017-11-25 01:11:26,719 INFO  [Base_Project] - Store locator - Start test #1
+2017-11-25 01:11:30,163 INFO  [Project_CommonFunction] - Clicked on the Element: "Our stores" with success 
+2017-11-25 01:11:40,289 ERROR [Project_CommonFunction] - The Element: [[ChromeDriver: chrome on XP (5176838dbda0af16d215b9ef4cfd75f2)] -> xpath: //*[@id='map']/div/div] is not displayed on page!!  Expected condition failed: waiting for element ([[ChromeDriver: chrome on XP (5176838dbda0af16d215b9ef4cfd75f2)] -> xpath: //*[@id='map']/div/div]) to be selected (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: 'unknown', revision: 'f233563', time: '2016-07-28 17:11:26 -0700'
+System info: host: 'lenga-PC', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\lenga\AppData\Local\Temp\scoped_dir9072_10520}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.94, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 5176838dbda0af16d215b9ef4cfd75f2
+2017-11-25 01:11:41,844 INFO  [Project_CommonFunction] - The image StoreToPNG.png exist!!
+2017-11-25 01:11:43,247 INFO  [Project_CommonFunction] - Clicked on Image:  StoreToPNG.png !!
+2017-11-25 01:11:44,100 INFO  [Project_CommonFunction] - The image StoreDirectionsMiami.png exist!!
+2017-11-25 01:11:44,963 INFO  [Project_CommonFunction] - The image ClosePopup.png exist!!
+2017-11-25 01:11:46,346 INFO  [Project_CommonFunction] - Clicked on Image:  ClosePopup.png !!
+2017-11-25 01:11:46,346 INFO  [Base_Project] - End of Test!!!
+2017-11-25 01:11:46,350 INFO  [Base_Project] - Sign in - Start test #2
+2017-11-25 01:11:48,204 INFO  [Project_CommonFunction] - Clicked on the Element: "Sign in" with success 
+2017-11-25 01:11:48,296 INFO  [Project_CommonFunction] - succeed to read from Excel 
+2017-11-25 01:11:48,566 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "publisherpete4@gmail.com"
+2017-11-25 01:11:48,695 INFO  [Project_CommonFunction] - Succeeded to send from field :"passwd" the value: "qwerty321"
+2017-11-25 01:11:50,315 INFO  [Project_CommonFunction] - The message that appear was :Welcome to your account. Here you can manage all of your personal information and orders.
+2017-11-25 01:11:50,315 INFO  [Base_Project] - Cradiantial publisherpete4@gmail.com, and Password: qwerty321were OK
+2017-11-25 01:11:51,888 INFO  [Base_Project] - Clicked on signout
+2017-11-25 01:11:52,079 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "publisherpete@gmail.com"
+2017-11-25 01:11:52,180 INFO  [Project_CommonFunction] - Succeeded to send from field :"passwd" the value: "123456"
+2017-11-25 01:11:53,170 INFO  [Project_CommonFunction] - The message that appear was :Authentication failed.
+2017-11-25 01:11:53,170 INFO  [Base_Project] - Cradiantial publisherpete@gmail.com, and Password: 123456were OK - Which FAILED to login
+2017-11-25 01:11:54,411 INFO  [Project_CommonFunction] - Clicked on the Element: "Log in to your customer account" with success 
+2017-11-25 01:11:54,411 INFO  [Base_Project] - End of Test!!!
+2017-11-25 01:11:54,412 INFO  [Base_Project] - Send Contact Us Form - Start test #3
+2017-11-25 01:11:55,616 INFO  [Project_CommonFunction] - Clicked on the Element: "Contact us" with success 
+2017-11-25 01:11:55,659 INFO  [Project_CommonFunction] - succeed to read from Excel 
+2017-11-25 01:11:55,876 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-11-25 01:11:56,055 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisherpetemail.com"
+2017-11-25 01:11:56,181 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-11-25 01:11:56,303 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-11-25 01:12:02,663 INFO  [Project_CommonFunction] - This Action succeed.
+2017-11-25 01:12:02,856 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-11-25 01:12:03,781 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-11-25 01:12:06,782 INFO  [Base_Project] - ContactUs form submitted!
+2017-11-25 01:12:06,881 INFO  [Project_CommonFunction] - The message that appear was :Invalid email address.
+2017-11-25 01:12:07,964 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-11-25 01:12:08,124 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-11-25 01:12:08,246 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-11-25 01:12:08,344 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-11-25 01:12:14,649 INFO  [Project_CommonFunction] - This Action succeed.
+2017-11-25 01:12:14,723 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: ""
+2017-11-25 01:12:15,818 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-11-25 01:12:18,819 INFO  [Base_Project] - ContactUs form submitted!
+2017-11-25 01:12:18,901 INFO  [Project_CommonFunction] - The message that appear was :The message cannot be blank.
+2017-11-25 01:12:20,099 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-11-25 01:12:20,250 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-11-25 01:12:20,363 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-11-25 01:12:20,475 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-11-25 01:12:26,779 INFO  [Project_CommonFunction] - This Action succeed.
+2017-11-25 01:12:26,919 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-11-25 01:12:29,536 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-11-25 01:12:32,536 INFO  [Base_Project] - ContactUs form submitted!
+2017-11-25 01:12:32,641 INFO  [Project_CommonFunction] - The message that appear was :Your message has been successfully sent to our team.
+2017-11-25 01:12:35,366 INFO  [Project_CommonFunction] - Clicked on the Element: "" with success 
+2017-11-25 01:12:35,366 INFO  [Base_Project] - End of Test!!!
+2017-11-25 01:12:35,366 INFO  [Base_Project] - Verify:Search and Shopping cart- Start test #4
+2017-11-25 01:12:35,496 INFO  [Project_CommonFunction] - Succeeded to send from field :"Search" the value: "Blouse"
+2017-11-25 01:12:37,046 INFO  [Project_CommonFunction] - Clicked on the Element: "Cart (empty)" with success 
+2017-11-25 01:12:38,655 INFO  [Project_CommonFunction] - The message that appear was :1 result has been found.
+2017-11-25 01:12:39,087 INFO  [Project_CommonFunction] - Clicked on the Element: "Add to cart" with success 
+2017-11-25 01:12:50,696 ERROR [Project_CommonFunction] - The Element: [[ChromeDriver: chrome on XP (5176838dbda0af16d215b9ef4cfd75f2)] -> xpath: //*[@id='layer_cart']/div[1]/div[2]/span] is not displayed on page!!  Expected condition failed: waiting for element ([[ChromeDriver: chrome on XP (5176838dbda0af16d215b9ef4cfd75f2)] -> xpath: //*[@id='layer_cart']/div[1]/div[2]/span]) to be selected (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: 'unknown', revision: 'f233563', time: '2016-07-28 17:11:26 -0700'
+System info: host: 'lenga-PC', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\lenga\AppData\Local\Temp\scoped_dir9072_10520}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.94, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 5176838dbda0af16d215b9ef4cfd75f2
+2017-11-25 01:12:51,192 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:12:51,236 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:12:51,287 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:12:51,334 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:12:51,377 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:12:51,378 INFO  [Base_Project] - The Elements are displayed on page!!
+2017-11-25 01:13:01,414 ERROR [Project_CommonFunction] - The Element: [[ChromeDriver: chrome on XP (5176838dbda0af16d215b9ef4cfd75f2)] -> xpath: //*[@id='layer_cart']/div[1]/div[2]/span/span[2]] is not displayed on page!!  Expected condition failed: waiting for element ([[ChromeDriver: chrome on XP (5176838dbda0af16d215b9ef4cfd75f2)] -> xpath: //*[@id='layer_cart']/div[1]/div[2]/span/span[2]]) to be selected (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: 'unknown', revision: 'f233563', time: '2016-07-28 17:11:26 -0700'
+System info: host: 'lenga-PC', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506120 (e3e53437346286c0bc2d2dc9aa4915ba81d9023f), userDataDir=C:\Users\lenga\AppData\Local\Temp\scoped_dir9072_10520}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.94, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 5176838dbda0af16d215b9ef4cfd75f2
+2017-11-25 01:13:01,916 INFO  [Project_CommonFunction] - Element name: There is 1 item in your cart., succeeded to loaded!!!
+2017-11-25 01:13:01,950 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:13:01,968 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:13:01,988 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:13:02,009 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:13:02,028 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:13:02,052 INFO  [Base_Project] - End of Test!!!
+2017-11-25 01:14:58,143 INFO  [Base_Project] - Open brwoser :Chrome
+2017-11-25 01:15:07,059 INFO  [Base_Project] - Store locator - Start test #1
+2017-11-25 01:15:10,138 INFO  [Project_CommonFunction] - Clicked on the Element: "Our stores" with success 
+2017-11-25 01:15:10,305 INFO  [Project_CommonFunction] - The Element Map data ©2017 Google, INEGI
+Terms of Use
+Map is displayed on page!!
+2017-11-25 01:15:11,303 INFO  [Project_CommonFunction] - The image StoreToPNG.png exist!!
+2017-11-25 01:15:12,716 INFO  [Project_CommonFunction] - Clicked on Image:  StoreToPNG.png !!
+2017-11-25 01:15:13,630 INFO  [Project_CommonFunction] - The image StoreDirectionsMiami.png exist!!
+2017-11-25 01:15:14,490 INFO  [Project_CommonFunction] - The image ClosePopup.png exist!!
+2017-11-25 01:15:15,861 INFO  [Project_CommonFunction] - Clicked on Image:  ClosePopup.png !!
+2017-11-25 01:15:15,861 INFO  [Base_Project] - End of Test!!!
+2017-11-25 01:16:02,460 INFO  [Base_Project] - Open brwoser :Chrome
+2017-11-25 01:16:10,986 INFO  [Base_Project] - Store locator - Start test #1
+2017-11-25 01:16:14,175 INFO  [Project_CommonFunction] - Clicked on the Element: "Our stores" with success 
+2017-11-25 01:16:14,326 INFO  [Project_CommonFunction] - The Element Map data ©2017 Google, INEGI
+Terms of Use
+Map is displayed on page!!
+2017-11-25 01:16:15,348 INFO  [Project_CommonFunction] - The image StoreToPNG.png exist!!
+2017-11-25 01:16:16,769 INFO  [Project_CommonFunction] - Clicked on Image:  StoreToPNG.png !!
+2017-11-25 01:16:17,627 INFO  [Project_CommonFunction] - The image StoreDirectionsMiami.png exist!!
+2017-11-25 01:16:18,487 INFO  [Project_CommonFunction] - The image ClosePopup.png exist!!
+2017-11-25 01:16:19,881 INFO  [Project_CommonFunction] - Clicked on Image:  ClosePopup.png !!
+2017-11-25 01:16:19,881 INFO  [Base_Project] - End of Test!!!
+2017-11-25 01:16:19,886 INFO  [Base_Project] - Verify:Search and Shopping cart- Start test #4
+2017-11-25 01:16:20,033 INFO  [Project_CommonFunction] - Succeeded to send from field :"Search" the value: "Blouse"
+2017-11-25 01:16:21,721 INFO  [Project_CommonFunction] - Clicked on the Element: "Cart (empty)" with success 
+2017-11-25 01:16:23,311 INFO  [Project_CommonFunction] - The message that appear was :1 result has been found.
+2017-11-25 01:16:23,737 INFO  [Project_CommonFunction] - Clicked on the Element: "Add to cart" with success 
+2017-11-25 01:16:25,307 INFO  [Project_CommonFunction] - The Element There is 1 item in your cart. is displayed on page!!
+2017-11-25 01:16:25,328 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:16:25,376 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:16:25,423 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:16:25,475 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:16:25,522 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:16:25,523 INFO  [Base_Project] - The Elements are displayed on page!!
+2017-11-25 01:16:25,572 INFO  [Project_CommonFunction] - The Element There is 1 item in your cart. is displayed on page!!
+2017-11-25 01:16:25,645 INFO  [Project_CommonFunction] - Element name: There is 1 item in your cart., succeeded to loaded!!!
+2017-11-25 01:16:25,685 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:16:25,704 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:16:25,724 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:16:25,746 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:16:25,764 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-11-25 01:16:25,789 INFO  [Base_Project] - End of Test!!!

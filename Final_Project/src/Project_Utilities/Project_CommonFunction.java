@@ -271,8 +271,6 @@ public class Project_CommonFunction extends Base_Project
 		
 		try
 		{
-			WebDriverWait wait = new WebDriverWait(driver,10);
-			wait.until(ExpectedConditions.elementSelectionStateToBe(elementExist, true));
 			VerifyElement=elementExist.getText();
 			logger.info("The Element "+VerifyElement+" is displayed on page!!");
 			test.log(LogStatus.PASS, "The Element: "+VerifyElement+"  is displayed on page!!");

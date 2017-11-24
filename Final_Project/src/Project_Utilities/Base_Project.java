@@ -4,16 +4,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
-//import java.sql.Connection;
-//import java.sql.DriverManager;
-//import java.sql.ResultSet;
-//import java.sql.SQLException;
-//import java.sql.Statement;
-//import java.time.LocalDate;
-//import java.util.Calendar;
-//import org.openqa.selenium.JavascriptExecutor;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -41,14 +32,13 @@ public class Base_Project
 	public static ExtentReports extent;
 	public static ExtentTest test;
 	static Instant instant = Instant.now();
-	public static long localDate = System.currentTimeMillis()/1000;// instant.getEpochSecond(); file:///E:/Project_Reports/2017.11.24.14.41.14-1511527274.png
-	//public static String timeStamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(Calendar.getInstance().getCalendar().getTime());	file:///E:/Project_Reports/2017.11.24.14.41.14-1511527274.png
+	public static long localDate = System.currentTimeMillis()/1000;
 	public static String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());	
-
 	public static Screen screen;
 	public static final Logger logger=Logger.getLogger(Base_Project.class.getName());
 	public static String WhichBrowserType;
 	
+	//Loh4j XML file
 	public void loadlog4j()
 	{
 			DOMConfigurator.configure("log4j.xml");
@@ -58,8 +48,6 @@ public class Base_Project
 	public  String getscreenshot() throws IOException, ParserConfigurationException, SAXException
 
 	{
-		//String SsPath=getData("ScreenshotsReportFilePath")+ timeStamp +"-"+localDate+".png";	 
-	//	String SsPath=getData("ScreenshotsReportFilePath")+ timeStamp +".png";	
 		String SsPath=getData("ScreenshotsReportFilePath")+ timeStamp()+localDate +".png";	
 		File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(scrFile, new File(SsPath));
@@ -112,7 +100,6 @@ public class Base_Project
 			test.log(LogStatus.INFO, OpeNTest);
 		}
 	
-
 	//Switch Browser
 	public static void InitBrowser(String BrowserType) throws ParserConfigurationException, SAXException, IOException
 	{
@@ -154,18 +141,12 @@ public class Base_Project
 		return driverIE;
 	}
 
-	public int getRandomNumber()
-	{
-		Random rand = new Random();
-		//int  n = rand.nextInt(999999) + 1000;
-		return rand.nextInt(999999) + 1000;
-	}
-
+	
 	public  String timeStamp()
 	{
-	 String ThetimeStamp= new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-	return ThetimeStamp;	
-	
+		String ThetimeStamp= new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+		return ThetimeStamp;	
+
 	}
 
 }

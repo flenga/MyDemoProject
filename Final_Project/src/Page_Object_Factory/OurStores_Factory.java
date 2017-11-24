@@ -24,9 +24,10 @@ public class OurStores_Factory extends Base_Project
 	
 	@FindBy(how = How.LINK_TEXT, using= "Our stores")
 	public WebElement StoreLink;
+	
 	@FindBy(how = How.XPATH,using="//*[@id='map']/div/div")
-	//@FindBy(how = How.XPATH,using="//*[@id='map']/div/div")
 	public WebElement MapDiv;
+	
 	public OurStores_Factory (WebDriver driver) 
 	{
 		Base_Project.driver = driver;

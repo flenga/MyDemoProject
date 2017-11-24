@@ -82,7 +82,7 @@ public class Project_Run_Tests extends Base_Project
 		Cuf.SendAmessage();
 		Hef.ClickOnLogoSite();
 	}
-	//file:///E:/Project_Reports/1937-11-24_14-24-44-1511526284.png
+
 	@Test
 	public void test_4_SearchForAnItemAndaddToCart() throws Exception 
 	{

@@ -53,8 +53,8 @@ public class SearchToShopping_Factory extends Base_Project
 		cf.verifyElementExist_new(TitleShoppingDiv1);
 		cf.waitToElement(TitleShoppingDiv1);
 		cf.asserequal(TitleShoppingDiv1.getText(), "There is 1 item in your cart.");
-		cf.asserequal(TotalProductsDiv.getText(), "$24.001");
-		cf.asserequal(TotalshippingDiv.getText(), "$17.00"); //TotalIncluds
+		cf.asserequal(TotalProductsDiv.getText(), "$24.00");
+		cf.asserequal(TotalshippingDiv.getText(), "$7.00"); //TotalIncluds
 		cf.asserequal(TotalIncludsDiv.getText(), "$31.00");
 		cf.asserequal(ProductTitleDiv.getText(), "Blouse");
 
