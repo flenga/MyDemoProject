@@ -21,16 +21,18 @@ public class Sign_In_Factory  extends Base_Project
 	@FindBy(how = How.LINK_TEXT, using= "Sign out")//After signin
 	public WebElement SignOut;
 	
-	@FindBy(how = How.XPATH, using= "//*[@id='email']")
+	//@FindBy(how = How.XPATH, using= "//*[@id='email']")//email
+	@FindBy(how = How.ID, using= "email")//email
 	public WebElement Emailaddress;
 		
-	@FindBy(how = How.XPATH, using= "//*[@id='passwd']")  
+	//@FindBy(how = How.XPATH, using= "//*[@id='passwd']")  
+	@FindBy(how = How.ID, using= "passwd") 
 	public WebElement Password;
 
 	@FindBy(how = How.ID, using= "SubmitLogin")  
 	public WebElement SignInButton;
 
-	@FindBy(how = How.XPATH, using= "1//*[@id='center_column']/div[1]") //@FindBy(how = How.XPATH, using= "//*[@id='center_column']/div[1]")
+	@FindBy(how = How.XPATH, using= "1//*[@id='center_column']/div[1]")
 	public WebElement ErrorForSignIn;
 
 	@FindBy(how = How.XPATH, using= "//*[@id='center_column']/div[1]/p")
@@ -99,7 +101,8 @@ public class Sign_In_Factory  extends Base_Project
 			} 
 			catch (Exception e) 
 			{
-				e.getMessage();
+				logger.error("There was a problem while trying to Sign in, see error : "+e.getMessage());
+				test.log(LogStatus.FAIL,"There was a problem while trying to Sign in, see error : "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
 			}
 		}
 

@@ -2,7 +2,6 @@ package Project_Utilities;
 import java.io.File;
 import java.io.IOException;
 import java.util.Hashtable;
-import java.util.concurrent.TimeUnit;
 import java.awt.HeadlessException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -13,8 +12,6 @@ import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.log4j.Logger;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.InvalidSelectorException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
@@ -55,10 +52,8 @@ public class Project_CommonFunction extends Base_Project
 		{
 			logger.error("Something went wrong with this action!!!");
 			test.log(LogStatus.FAIL, "Action Failed  , see Screen Shot: " + e.getMessage());
-
 			e.getMessage();
 		}
-
 	}	
 
 	//File-Up loader function to use to upload computers file. 
@@ -155,28 +150,21 @@ public class Project_CommonFunction extends Base_Project
 	}
 
 	//waitToElement
-	public void waitToElement(WebElement ElementToWait) throws Exception//,IOException, ParserConfigurationException, SAXException
+	public void waitToElement(WebElement ElementToWait) throws Exception
 	{
 		try 
 		{
-			WebDriverWait wait = new WebDriverWait(driver,15);
+			WebDriverWait wait = new WebDriverWait(driver,10);
 			wait.until(ExpectedConditions.visibilityOf(ElementToWait));
-			ElementToWait.isDisplayed();
-			logger.info("Element name: "+ElementToWait.getText()+", succeeded to loaded!!!");
-			test.log(LogStatus.PASS,"Element name: "+ElementToWait.getText()+", succeeded to loaded!!!");
+			logger.info("The element , succeeded to loaded!!!");
+			test.log(LogStatus.PASS,"The element , succeeded to loaded!!!!!!");
 		} 
-		catch(InvalidSelectorException e)
+		
+		catch(Exception e)
 		{
 			e.getMessage();
-			logger.error("Failed to loaded element: "+ElementToWait.getText()+"!! "+e.getMessage() );
-			test.log(LogStatus.FAIL,"Failed to loaded element: "+ElementToWait.getText()+"!!!! see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
-			e.printStackTrace();
-		}
-		catch(TimeoutException e)
-		{
-			e.getMessage();
-			logger.error("Failed to loaded element: "+ElementToWait.getText()+"!! "+e.getMessage() );
-			test.log(LogStatus.FAIL,"Failed to loaded element: "+ElementToWait.getText()+"!!!! see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
+			logger.error("Failed to loaded element!! "+e.getMessage() );
+			test.log(LogStatus.FAIL,"Failed to loaded element!! see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
 			fail("Element NOT Exists !");
 		}
 		
@@ -261,8 +249,7 @@ public class Project_CommonFunction extends Base_Project
 		{
 			logger.error("The Element: is not displayed on page!!  "+e.getMessage());
 			test.log(LogStatus.FAIL,"The Element:   is not displayed on page!! see screenshot:  "+test.addScreenCapture(getscreenshot()));
-		
-	    }
+		}
 	}
 	
 	public boolean  verifyElementExist_new(WebElement elementExist) throws Exception, IOException, ParserConfigurationException, SAXException
@@ -276,22 +263,15 @@ public class Project_CommonFunction extends Base_Project
 			test.log(LogStatus.PASS, "The Element: "+VerifyElement+"  is displayed on page!!");
 			return true;
 		}
-		catch(NoSuchElementException e)
+		catch(Exception e)
 		{
 			logger.error("The Element: "+elementExist+" is not displayed on page!!  "+e.getMessage());
 			test.log(LogStatus.FAIL,"The Element: "+elementExist+"  is not displayed on page!! see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
 			fail("Element NOT Exists !");
 			return false;
 		}
-		catch (TimeoutException e) 
-		{
-			 logger.error("The Element: "+elementExist+" is not displayed on page!!  "+e.getMessage());
-			 test.log(LogStatus.FAIL,"The Element:  "+elementExist+"    is not displayed on page!! see screenshot:  "+test.addScreenCapture(getscreenshot()));
-			 return false;
-	    }
 	}
-	
-	
+		
 	//Check if element contain text
 	public void verifyTextInElement( WebElement elementExistInPage ,String StrToFind) throws Exception 
 	{
@@ -365,7 +345,7 @@ public class Project_CommonFunction extends Base_Project
 			logger.info("The message that appear was :"+message);
 			test.log(LogStatus.PASS,"Message shown after action is :" +message);
 		}
-		catch(Exception  e)
+		catch(Exception e)
 		{
 			logger.error("There was an error while sending the form see error message :"+message +" "+e.getMessage());
 			test.log(LogStatus.FAIL, "There was an error while sending the form see error message :"+message +" "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));

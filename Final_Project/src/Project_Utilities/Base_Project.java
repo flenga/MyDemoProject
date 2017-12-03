@@ -37,6 +37,12 @@ public class Base_Project
 	public static Screen screen;
 	public static final Logger logger=Logger.getLogger(Base_Project.class.getName());
 	public static String WhichBrowserType;
+	//These variables can be replace with different data source and are used in SearchToShopping_Factory class and SearchArea_Factory class.
+	public String TitleInShoppingDiv="There is 1 item in your cart.";
+	public String productPrice="$2.4.00";
+	public String ShippingPrice="$7.00";
+	public String TotalPrice="$31.01";
+	public String ProductName="Blouse";
 	
 	//Loh4j XML file
 	public void loadlog4j()

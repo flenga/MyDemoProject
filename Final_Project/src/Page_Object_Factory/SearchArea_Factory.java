@@ -9,14 +9,13 @@ import Project_Utilities.Project_CommonFunction;
 
 public class SearchArea_Factory extends Base_Project
 {
-
 	public String ShoppingCartAfter;
 	public String ValuToreport;
 	Project_CommonFunction cf = new Project_CommonFunction();
 	SearchToShopping_Factory St=new SearchToShopping_Factory();
 
 	@FindBy(how = How.ID,using= "search_query_top") 
-	public WebElement SearchBar;  //Blouse
+	public WebElement SearchBar;
 
 	@FindBy(how = How.NAME,using= "submit_search") 
 	public WebElement SubmitButton; 
@@ -52,12 +51,13 @@ public class SearchArea_Factory extends Base_Project
 	public WebElement Totalshipping; 
 
 	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart']/div[1]/div[2]/div[3]/span") 
-
 	public WebElement TotalIncluds;
 
 	@FindBy(how = How.XPATH,using= "//*[@id='layer_cart_product_title']") 
-
 	public WebElement ProductTitle;
+
+	@FindBy(how = How.CSS,using= "span.cross[title='Close window']") 
+	public WebElement CloseDiv;
 
 	public SearchArea_Factory(WebDriver driver)
 	{
@@ -85,11 +85,11 @@ public class SearchArea_Factory extends Base_Project
 			try 
 			{
 				cf.verifyElementExist_new(TitleShoppingDiv1);
-				cf.asserequal( TitleShoppingDiv1.getText(), "There is 1 item in your cart.");
-				cf.asserequal(TotalProducts1.getText(), "$24.00");
-				cf.asserequal(Totalshipping.getText(), "$7.00");
-				cf.asserequal(TotalIncluds.getText(), "$31.00");
-				cf.asserequal(ProductTitle.getText(), "Blouse");
+				cf.asserequal( TitleShoppingDiv1.getText(),TitleInShoppingDiv);
+				cf.asserequal(TotalProducts1.getText(),productPrice);
+				cf.asserequal(Totalshipping.getText(),ShippingPrice);
+				cf.asserequal(TotalIncluds.getText(),TotalPrice);
+				cf.asserequal(ProductTitle.getText(),ProductName);
 				logger.info("The Elements are displayed on page!!");
 				test.log(LogStatus.PASS, "The Elements:  are displayed on page!!");
 			} 
@@ -101,5 +101,19 @@ public class SearchArea_Factory extends Base_Project
 			}
 		}
 
+		cf.waitToElement(CloseDiv);
+		String ValueSendToreport=CloseDiv.getAttribute("title");
+		cf.ClickOnElement(CloseDiv,ValueSendToreport);
+		try 
+		{
+			ShoppingCartAfter=ShoppingCart.getText();
+			logger.info("The Element: "+ ShoppingCartAfter+" appear  !!");
+			test.log(LogStatus.PASS, "The Element :"+ ShoppingCartAfter+"  appear !!");
+		}
+		catch(Exception e) 
+		{
+			logger.error("Failed to get the text from "+ShoppingCart+"  : "+e.getMessage());
+			test.log(LogStatus.FAIL,"Failed to get text from "+ ShoppingCart+"  :  see screenshot: "+e.getMessage()+" "+test.addScreenCapture(getscreenshot()));
+		}
 	}
 }

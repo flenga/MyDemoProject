@@ -1,21 +1,11 @@
 package Project_TestCases;
 import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.support.PageFactory;
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.chrome.ChromeDriver;
-//import org.openqa.selenium.By;
-//import org.openqa.selenium.JavascriptExecutor;
-
-//import org.sikuli.script.*;
-//import org.testng.annotations.DataProvider;
-//import org.xml.sax.SAXException;
-
 import Page_Object_Factory.ContactUs_Factory;
 import Page_Object_Factory.Footer_Factory;
 import Page_Object_Factory.Header_Factory;
@@ -55,6 +45,11 @@ public class Project_Run_Tests extends Base_Project
 		Ssc = PageFactory.initElements(driver, SearchToShopping_Factory.class);
 	}
 	
+	/*
+	 * This Test case check the Our stores page, by using Sikuli it will verify 
+	 * that clicking on a store location will open the correct location dialog.
+	*/
+	
 	@Test
 	public void test_1_Storelocator() throws Exception
 	{
@@ -62,9 +57,14 @@ public class Project_Run_Tests extends Base_Project
 		StartTest("Store locator - Start test #1");
 		Osf.OpenOneOfTheStoresLocationCheckingAddressAndDialog();
 	}
-
-	@Test
 	
+	/*
+	 * This Test case check the Sign in page. entering different credentials 
+	 * and verify that correct message appear according to credentials. 
+	 * This test case and the next one are using an Excel file with Data.
+	 */
+	
+	@Test
 	public void test_2_SignIn() throws Exception 
 	{
 		initReportTest("Second test","Verify:The login page of The Site ");
@@ -73,6 +73,11 @@ public class Project_Run_Tests extends Base_Project
 		fsf.LoginToPage();
 	}
 
+	/*
+	 * This Test case check the Contact us page. 
+	 * Verify and check file and sending the Contact us form with different content.
+	 */
+	
 	@Test
 	public void test_3_SendContactUsForm() throws Exception 
 	{
@@ -83,13 +88,18 @@ public class Project_Run_Tests extends Base_Project
 		Hef.ClickOnLogoSite();
 	}
 
+	/*
+	 * This Test case check the field Search of the site.
+	 * After searching for an item adding the Item to the Shopping cart 
+	 * and verify that details are correct!! 
+	 */
+	
 	@Test
 	public void test_4_SearchForAnItemAndaddToCart() throws Exception 
 	{
 		initReportTest("Fourth test","Verify:Search and Shopping cart");
 		StartTest("Verify:Search and Shopping cart- Start test #4");
 		Saf.SearchForAnItemAndAddToShoppingCart();
-		Ssc.VerifyElementIndiv();
 	}
 
 	@After

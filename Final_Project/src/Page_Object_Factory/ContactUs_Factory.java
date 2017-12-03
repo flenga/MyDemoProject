@@ -26,7 +26,8 @@ public class ContactUs_Factory  extends Base_Project
 	@FindBy(how = How.ID, using= "id_order")//In case user is sign in and has orders it become selection
 	public WebElement OrderRef;
 
-	@FindBy(how = How.XPATH, using= "//*[@id='fileUpload']")//Upload file button fileUpload 
+	//@FindBy(how = How.XPATH, using= "//*[@id='fileUpload']")//Upload file button fileUpload 
+	@FindBy(how = How.ID, using= "fileUpload")//Upload file button fileUpload 
 	public WebElement fileUploadButton;
 
 	@FindBy(how = How.ID, using= "message")
@@ -82,7 +83,7 @@ public class ContactUs_Factory  extends Base_Project
 				ValuToreport=SubmitMessage.getAttribute("name");
 				cf.ClickOnElement(SubmitMessage,ValuToreport);
 				Thread.sleep(3000);
-				logger.info("ContactUs form submitted!");
+				logger.info("ContactUs Form submitted!");
 				test.log(LogStatus.PASS, "ContactUs form submitted!");
 				/*
 				 * This check if the error is green or red and according to the color 
