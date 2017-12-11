@@ -6,7 +6,7 @@
     <ChromeDriverPath>External_Files/Drivers/Chrome/chromedriver.exe</ChromeDriverPath>
     <URL>http://yoniflenner.net/prestashop/index.php</URL>
     
- <!-- Images to compare-path -->
+  <!-- Images to compare-path -->
  <ImagePath>External_Files//Sikuli_Images//</ImagePath>  
  <!-- report-->
 <ScreenshotsReportFilePath>/Project_Reports/</ScreenshotsReportFilePath>

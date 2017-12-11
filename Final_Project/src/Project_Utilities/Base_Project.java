@@ -39,9 +39,9 @@ public class Base_Project
 	public static String WhichBrowserType;
 	//These variables can be replace with different data source and are used in SearchToShopping_Factory class and SearchArea_Factory class.
 	public String TitleInShoppingDiv="There is 1 item in your cart.";
-	public String productPrice="$2.4.00";
+	public String productPrice="$24.00";
 	public String ShippingPrice="$7.00";
-	public String TotalPrice="$31.01";
+	public String TotalPrice="$31.00";
 	public String ProductName="Blouse";
 	
 	//Loh4j XML file
@@ -146,7 +146,6 @@ public class Base_Project
 			WebDriver driverIE= new InternetExplorerDriver();
 		return driverIE;
 	}
-
 	
 	public  String timeStamp()
 	{

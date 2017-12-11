@@ -21,11 +21,9 @@ public class Sign_In_Factory  extends Base_Project
 	@FindBy(how = How.LINK_TEXT, using= "Sign out")//After signin
 	public WebElement SignOut;
 	
-	//@FindBy(how = How.XPATH, using= "//*[@id='email']")//email
-	@FindBy(how = How.ID, using= "email")//email
+	@FindBy(how = How.ID, using= "email")
 	public WebElement Emailaddress;
 		
-	//@FindBy(how = How.XPATH, using= "//*[@id='passwd']")  
 	@FindBy(how = How.ID, using= "passwd") 
 	public WebElement Password;
 

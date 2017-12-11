@@ -1,12 +1,9 @@
 package Page_Object_Factory;
 
-//import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-
 import com.relevantcodes.extentreports.LogStatus;
-
 import Project_Utilities.Base_Project;
 import Project_Utilities.Project_CommonFunction;
 public class SearchToShopping_Factory extends Base_Project
@@ -50,15 +47,6 @@ public class SearchToShopping_Factory extends Base_Project
 	
 	public void VerifyElementIndiv() throws Exception
 	{
-		/*
-		cf.verifyElementExist_new(TitleShoppingDiv1);
-		cf.waitToElement(TitleShoppingDiv1);
-		cf.asserequal(TitleShoppingDiv1.getText(),TitleInShoppingDiv);
-		cf.asserequal(TotalProductsDiv.getText(),productPrice);
-		cf.asserequal(TotalshippingDiv.getText(),ShippingPrice);
-		cf.asserequal(TotalIncludsDiv.getText(),TotalPrice);
-		cf.asserequal(ProductTitleDiv.getText(),ProductName);
-		 */
 		ValueSendToreport=CloseDiv.getAttribute("title");
 		cf.ClickOnElement(CloseDiv,ValueSendToreport);
 		try 

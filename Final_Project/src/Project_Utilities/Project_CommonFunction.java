@@ -332,7 +332,6 @@ public class Project_CommonFunction extends Base_Project
 		}
 			
 	}
-
 	
 	public void SearchResult(WebElement Message) throws Exception
 	{

@@ -74,7 +74,6 @@ public class Registration_Factory extends Base_Project
 		cf.waitToElement(ErrorMessage);  
 		cf.verifyElementExist(ErrorMessage);
 		Thread.sleep(500);
-		
 	}
 }
 

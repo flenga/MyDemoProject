@@ -103,8 +103,6 @@ public class ExcelReader
 
 	 */
 
-
-
 	public static int GetCell(String colName)
 	{
 

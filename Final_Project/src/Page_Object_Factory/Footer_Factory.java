@@ -10,7 +10,6 @@ import Project_Utilities.Project_CommonFunction;
 public class Footer_Factory extends Base_Project
 {
 	Project_CommonFunction cf = new Project_CommonFunction();
-	//public WebDriver driver;
 	public String ValuToreport;
 	@FindBy(how = How.LINK_TEXT, using= "Our stores")   
 	public WebElement StoreLink;
