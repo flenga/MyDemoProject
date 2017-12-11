@@ -10833,3 +10833,77 @@ Map is displayed on page!!
 2017-12-04 00:52:44,842 INFO  [Project_CommonFunction] - Clicked on the Element: "Close window" with success 
 2017-12-04 00:52:44,895 INFO  [Base_Project] - The Element: Cart 1 Product appear  !!
 2017-12-04 00:52:44,895 INFO  [Base_Project] - End of Test!!!
+2017-12-11 22:31:13,221 INFO  [Base_Project] - Open brwoser :Chrome
+2017-12-11 22:31:31,574 INFO  [Base_Project] - Store locator - Start test #1
+2017-12-11 22:31:37,994 INFO  [Project_CommonFunction] - Clicked on the Element: "Our stores" with success 
+2017-12-11 22:31:38,131 INFO  [Project_CommonFunction] - The Element Map data ©2017 Google, INEGI
+Terms of Use
+Map is displayed on page!!
+2017-12-11 22:31:39,484 INFO  [Project_CommonFunction] - The image StoreToPNG.png exist!!
+2017-12-11 22:31:41,047 INFO  [Project_CommonFunction] - Clicked on Image:  StoreToPNG.png !!
+2017-12-11 22:31:41,973 INFO  [Project_CommonFunction] - The image StoreDirectionsMiami.png exist!!
+2017-12-11 22:31:42,821 INFO  [Project_CommonFunction] - The image ClosePopup.png exist!!
+2017-12-11 22:31:44,191 INFO  [Project_CommonFunction] - Clicked on Image:  ClosePopup.png !!
+2017-12-11 22:31:44,191 INFO  [Base_Project] - End of Test!!!
+2017-12-11 22:31:44,195 INFO  [Base_Project] - Sign in - Start test #2
+2017-12-11 22:31:46,733 INFO  [Project_CommonFunction] - Clicked on the Element: "Sign in" with success 
+2017-12-11 22:31:47,242 INFO  [Project_CommonFunction] - succeed to read from Excel 
+2017-12-11 22:31:47,534 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "publisherpete4@gmail.com"
+2017-12-11 22:31:47,666 INFO  [Project_CommonFunction] - Succeeded to send from field :"passwd" the value: "qwerty321"
+2017-12-11 22:31:51,115 INFO  [Project_CommonFunction] - The message that appear was :Welcome to your account. Here you can manage all of your personal information and orders.
+2017-12-11 22:31:51,115 INFO  [Base_Project] - Cradiantial publisherpete4@gmail.com, and Password: qwerty321were OK
+2017-12-11 22:31:53,082 INFO  [Base_Project] - Clicked on signout
+2017-12-11 22:31:53,272 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "publisherpete@gmail.com"
+2017-12-11 22:31:53,385 INFO  [Project_CommonFunction] - Succeeded to send from field :"passwd" the value: "123456"
+2017-12-11 22:31:54,545 INFO  [Project_CommonFunction] - The message that appear was :Authentication failed.
+2017-12-11 22:31:54,546 INFO  [Base_Project] - Cradiantial publisherpete@gmail.com, and Password: 123456were OK - Which FAILED to login
+2017-12-11 22:31:56,009 INFO  [Project_CommonFunction] - Clicked on the Element: "Log in to your customer account" with success 
+2017-12-11 22:31:56,009 INFO  [Base_Project] - End of Test!!!
+2017-12-11 22:31:56,010 INFO  [Base_Project] - Send Contact Us Form - Start test #3
+2017-12-11 22:31:57,566 INFO  [Project_CommonFunction] - Clicked on the Element: "Contact us" with success 
+2017-12-11 22:31:57,601 INFO  [Project_CommonFunction] - succeed to read from Excel 
+2017-12-11 22:31:57,821 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-12-11 22:31:58,042 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisherpetemail.com"
+2017-12-11 22:31:58,162 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-11 22:31:58,287 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-11 22:32:05,306 INFO  [Project_CommonFunction] - This Action succeed.
+2017-12-11 22:32:05,460 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-12-11 22:32:06,734 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-11 22:32:09,734 INFO  [Base_Project] - ContactUs Form submitted!
+2017-12-11 22:32:09,836 INFO  [Project_CommonFunction] - The message that appear was :Invalid email address.
+2017-12-11 22:32:11,084 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-12-11 22:32:11,251 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-12-11 22:32:11,378 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-11 22:32:11,512 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-11 22:32:17,815 INFO  [Project_CommonFunction] - This Action succeed.
+2017-12-11 22:32:17,922 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: ""
+2017-12-11 22:32:19,079 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-11 22:32:22,079 INFO  [Base_Project] - ContactUs Form submitted!
+2017-12-11 22:32:22,165 INFO  [Project_CommonFunction] - The message that appear was :The message cannot be blank.
+2017-12-11 22:32:23,432 INFO  [Project_CommonFunction] -  Element selected with success 
+2017-12-11 22:32:23,625 INFO  [Project_CommonFunction] - Succeeded to send from field :"email" the value: "Publisher@petemail.com"
+2017-12-11 22:32:23,753 INFO  [Project_CommonFunction] - Succeeded to send from field :"id_order" the value: "123456"
+2017-12-11 22:32:23,889 INFO  [Project_CommonFunction] - Clicked on the Element: "fileUpload" with success 
+2017-12-11 22:32:30,191 INFO  [Project_CommonFunction] - This Action succeed.
+2017-12-11 22:32:30,351 INFO  [Project_CommonFunction] - Succeeded to send from field :"message" the value: "This is a test"
+2017-12-11 22:32:33,199 INFO  [Project_CommonFunction] - Clicked on the Element: "submitMessage" with success 
+2017-12-11 22:32:36,199 INFO  [Base_Project] - ContactUs Form submitted!
+2017-12-11 22:32:36,290 INFO  [Project_CommonFunction] - The message that appear was :Your message has been successfully sent to our team.
+2017-12-11 22:32:39,110 INFO  [Project_CommonFunction] - Clicked on the Element: "" with success 
+2017-12-11 22:32:39,110 INFO  [Base_Project] - End of Test!!!
+2017-12-11 22:32:39,110 INFO  [Base_Project] - Verify:Search and Shopping cart- Start test #4
+2017-12-11 22:32:39,218 INFO  [Project_CommonFunction] - Succeeded to send from field :"Search" the value: "Blouse"
+2017-12-11 22:32:41,573 INFO  [Project_CommonFunction] - Clicked on the Element: "Cart (empty)" with success 
+2017-12-11 22:32:43,163 INFO  [Project_CommonFunction] - The message that appear was :1 result has been found.
+2017-12-11 22:32:43,576 INFO  [Project_CommonFunction] - Clicked on the Element: "Add to cart" with success 
+2017-12-11 22:32:45,130 INFO  [Project_CommonFunction] - The Element There is 1 item in your cart. is displayed on page!!
+2017-12-11 22:32:45,150 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-12-11 22:32:46,225 ERROR [Project_CommonFunction] - Something went wrong while trying to Assert the two values: $24.00 and second one is: $2.4.00
+2017-12-11 22:32:46,286 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-12-11 22:32:46,746 ERROR [Project_CommonFunction] - Something went wrong while trying to Assert the two values: $31.00 and second one is: $31.01
+2017-12-11 22:32:46,792 INFO  [Project_CommonFunction] - Assertion  was succed 
+2017-12-11 22:32:46,792 INFO  [Base_Project] - The Elements are displayed on page!!
+2017-12-11 22:32:46,837 INFO  [Project_CommonFunction] - The element , succeeded to loaded!!!
+2017-12-11 22:32:46,924 INFO  [Project_CommonFunction] - Clicked on the Element: "Close window" with success 
+2017-12-11 22:32:46,984 INFO  [Base_Project] - The Element: Cart 1 Product appear  !!
+2017-12-11 22:32:46,984 INFO  [Base_Project] - End of Test!!!
