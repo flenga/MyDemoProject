@@ -76,6 +76,7 @@ public class SearchArea_Factory extends Base_Project
 		{
 			ListView.click();
 		}
+		
 		if(InStock.isDisplayed())
 		{
 			ListView.click();

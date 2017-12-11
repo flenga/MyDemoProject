@@ -1,7 +1,6 @@
 package Page_Object_Factory;
 
 import static org.junit.Assert.fail;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

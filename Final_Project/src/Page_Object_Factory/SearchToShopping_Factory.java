@@ -9,6 +9,7 @@ import Project_Utilities.Project_CommonFunction;
 public class SearchToShopping_Factory extends Base_Project
 {
 	Project_CommonFunction cf = new Project_CommonFunction();
+	
 	private String ValueSendToreport;
 	public String ShoppingCartAfter;
 

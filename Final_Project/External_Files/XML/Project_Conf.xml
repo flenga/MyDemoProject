@@ -7,11 +7,13 @@
     <URL>http://yoniflenner.net/prestashop/index.php</URL>
     
   <!-- Images to compare-path -->
- <ImagePath>External_Files//Sikuli_Images//</ImagePath>  
+ <ImagePath>External_Files//Sikuli_Images//</ImagePath> 
+  
  <!-- report-->
 <ScreenshotsReportFilePath>/Project_Reports/</ScreenshotsReportFilePath>
 <ReportFilePath>External_Files//Project_Reports//</ReportFilePath>
 <Reporfilename>_prestashop-E-Commerce-Run.html</Reporfilename>
+
 <!-- Connection to Excel -->
 <ExcelFilePath>External_Files/Excels/</ExcelFilePath>
 </Environment>
